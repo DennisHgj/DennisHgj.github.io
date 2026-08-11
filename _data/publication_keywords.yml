@@ -1,0 +1,95 @@
+huang2026smp:
+  en:
+    - Audio-Visual Learning
+    - Few-Shot Learning
+    - Prompt Tuning
+    - Modality Rebalancing
+  zh:
+    - 音视频学习
+    - 小样本学习
+    - 提示调优
+    - 模态重平衡
+
+huang2026lend:
+  en:
+    - Cued Speech Recognition
+    - Multimodal LLM
+    - Training-Free Learning
+    - Visual Speech
+  zh:
+    - 线索语识别
+    - 多模态大模型
+    - 免训练学习
+    - 视觉语音
+
+huang2025cuedagent:
+  en:
+    - Cued Speech Recognition
+    - Multi-Agent Systems
+    - Multimodal Learning
+    - LLM Self-Correction
+  zh:
+    - 线索语识别
+    - 多智能体系统
+    - 多模态学习
+    - 大模型自校正
+
+xie2026phyavbench:
+  en:
+    - Audio-Visual Generation
+    - Physical Grounding
+    - Evaluation Benchmark
+    - Text-to-Audio-Video
+  zh:
+    - 音视频生成
+    - 物理规律对齐
+    - 评测基准
+    - 文本到音视频
+
+zhang2023webuav:
+  en:
+    - UAV Tracking
+    - Multimodal Tracking
+    - Large-Scale Dataset
+    - Visual Object Tracking
+  zh:
+    - 无人机目标跟踪
+    - 多模态跟踪
+    - 大规模数据集
+    - 视觉目标跟踪
+
+zhang2024webuot:
+  en:
+    - Underwater Tracking
+    - Large-Scale Benchmark
+    - Multimodal Tracking
+    - Object Tracking
+  zh:
+    - 水下目标跟踪
+    - 大规模评测基准
+    - 多模态跟踪
+    - 目标跟踪
+
+zhang2025underwater:
+  en:
+    - Underwater Tracking
+    - Camouflaged Objects
+    - Vision-Language Models
+    - SAM2
+  zh:
+    - 水下目标跟踪
+    - 伪装目标
+    - 视觉语言模型
+    - SAM2
+
+huang2024content:
+  en:
+    - Audio-Visual Emotion Recognition
+    - Parameter-Efficient Learning
+    - Multimodal Fusion
+    - Affective Computing
+  zh:
+    - 音视频情感识别
+    - 参数高效学习
+    - 多模态融合
+    - 情感计算
