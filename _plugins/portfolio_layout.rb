@@ -4,6 +4,9 @@ PORTFOLIO_LAYOUT_STYLE = <<~HTML.freeze
   <style id="portfolio-layout-style">
     .projects .row.row-cols-1 > .col {
       display: flex;
+      flex: 0 0 50%;
+      max-width: 50%;
+      width: 50%;
     }
 
     .projects .row.row-cols-1 > .col > a {
@@ -102,6 +105,12 @@ PORTFOLIO_LAYOUT_STYLE = <<~HTML.freeze
     }
 
     @media (max-width: 767.98px) {
+      .projects .row.row-cols-1 > .col {
+        flex-basis: 100%;
+        max-width: 100%;
+        width: 100%;
+      }
+
       .projects .card {
         min-height: 0;
       }
