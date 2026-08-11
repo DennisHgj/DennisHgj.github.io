@@ -4,7 +4,7 @@ title: Semantic Modulated Prompting
 description: Semantic prompts align asynchronous audio-visual evidence and dynamically rebalance weak modalities in few-shot learning.
 importance: 3
 category: research
-img: assets/img/projects/semantic-modulated-prompting-framework-preview.png
+img: assets/img/projects/semantic-modulated-prompting-framework-full.png
 github: https://github.com/DennisHgj/SMP_FSAVC
 ---
 

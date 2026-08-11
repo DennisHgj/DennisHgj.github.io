@@ -29,14 +29,4 @@ lang: zh
     </div>
   </div>
 
-{% assign engineering_projects = site.data.projects_zh | where: "category", "engineering" | sort: "importance" %}
-  <h2 class="category">工程与数据</h2>
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-2">
-      {% for item in engineering_projects %}
-        {% assign project = item %}
-        {% include projects_horizontal.liquid %}
-      {% endfor %}
-    </div>
-  </div>
 </div>

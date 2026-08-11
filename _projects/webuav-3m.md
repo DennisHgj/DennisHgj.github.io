@@ -2,8 +2,8 @@
 layout: page
 title: WebUAV-3M
 description: A 3.3M-frame UAV tracking benchmark with dense boxes, language specifications, audio descriptions, and diverse target categories.
-importance: 1
-category: engineering
+importance: 2
+category: benchmark
 img: assets/img/projects/webuav-representative-videos-preview.webp
 github: https://github.com/983632847/WebUAV-3M
 ---

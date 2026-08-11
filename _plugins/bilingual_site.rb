@@ -54,7 +54,7 @@ module BilingualSite
     "#{site.config['url']}#{site.config['baseurl']}#{path}"
   end
 
-  def replace_chinese_navigation(output)
+  def replace_chinese_navigation(output, current_url)
     NAV_TRANSLATIONS.each do |english_path, chinese_title|
       escaped_path = Regexp.escape(english_path)
       output.gsub!(%r{(<a class="nav-link" href=")#{escaped_path}("[^>]*>).*?(</a>)}m) do
@@ -63,7 +63,9 @@ module BilingualSite
     end
 
     output.gsub!(%r{(<a class="navbar-brand title font-weight-lighter" href=")[^"]*(")}m, '\1/zh/\2')
-    output.sub!(%r{<li class="nav-item\s*">\s*<a class="nav-link" href="/zh/">首页</a>\s*</li>}m, '<li class="nav-item active"><a class="nav-link" href="/zh/">首页</a></li>')
+    if current_url == '/zh/'
+      output.sub!(%r{<li class="nav-item\s*">\s*<a class="nav-link" href="/zh/">首页</a>\s*</li>}m, '<li class="nav-item active"><a class="nav-link" href="/zh/">首页</a></li>')
+    end
   end
 
   def remove_home_brand(output)
@@ -114,7 +116,7 @@ Jekyll::Hooks.register :pages, :post_render do |page|
   english_path = chinese ? alternate_path : page.url
   chinese_path = chinese ? page.url : alternate_path
 
-  BilingualSite.replace_chinese_navigation(page.output) if chinese
+  BilingualSite.replace_chinese_navigation(page.output, page.url) if chinese
   BilingualSite.remove_home_brand(page.output) if page.url == '/zh/'
   BilingualSite.translate_chinese_ui(page.output) if chinese
   BilingualSite.add_language_switch(

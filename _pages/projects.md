@@ -5,7 +5,7 @@ permalink: /projects/
 description: Selected research projects in audio-visual intelligence, multimodal agents, model reliability, and large-scale datasets.
 nav: true
 nav_order: 3
-display_categories: [research, benchmark, engineering]
+display_categories: [research, benchmark]
 horizontal: true
 ---
 

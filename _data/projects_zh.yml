@@ -18,7 +18,7 @@
   description: 以语义提示缓解小样本音视频学习中的过拟合、时序异步与模态失衡，并保持参数高效。
   category: research
   importance: 3
-  img: assets/img/projects/semantic-modulated-prompting-framework-preview.png
+  img: assets/img/projects/semantic-modulated-prompting-framework-full.png
   url: /zh/projects/semantic-modulated-prompting/
   github: https://github.com/DennisHgj/SMP_FSAVC
 
@@ -45,8 +45,8 @@
 
 - title: WebUAV-3M
   description: 包含 330 万帧、4500 个视频和 223 类目标，并加入自然语言规范与音频描述的无人机跟踪基准。
-  category: engineering
-  importance: 1
+  category: benchmark
+  importance: 2
   img: assets/img/projects/webuav-representative-videos-preview.webp
   url: /zh/projects/webuav-3m/
   github: https://github.com/983632847/WebUAV-3M

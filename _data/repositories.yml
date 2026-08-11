@@ -1,9 +1,25 @@
 github_users:
   - DennisHgj
 
-repo_description_lines_max: 2
+repo_description_lines_max: 3
 
-github_repos:
+research_repos:
   - DennisHgj/Cued-Agent
   - DennisHgj/STF_ACSR
+  - DennisHgj/SMP_FSAVC
+  - imxtx/PhyAVBench
+  - 983632847/WebUAV-3M
+  - 983632847/Awesome-Multimodal-Object-Tracking
+
+software_repos:
+  - DennisHgj/lithology-viewer
+  - DennisHgj/pyela
+  - DennisHgj/pyela-doc
+  - DennisHgj/litho-aem-blending-eda
+  - DennisHgj/3D-Lithology-Visualize-Sample
+  - DennisHgj/UnifiedStyleTransfer
+  - DennisHgj/behance_release
+  - DennisHgj/wikiart
   - DennisHgj/DennisHgj.github.io
+
+all_repositories_url: https://github.com/DennisHgj?tab=repositories
