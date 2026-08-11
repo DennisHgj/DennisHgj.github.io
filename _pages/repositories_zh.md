@@ -29,4 +29,4 @@ lang: zh
 </div>
 {% endif %}
 
-这里只展示论文已有代码和本站之前提到的项目。[查看 GitHub 上的全部公开仓库]({{ site.data.repositories.all_repositories_url }})。
+这里只展示由我本人 GitHub 账号维护、且与近期研究或本站直接相关的仓库。[查看 GitHub 上的全部公开仓库]({{ site.data.repositories.all_repositories_url }})。

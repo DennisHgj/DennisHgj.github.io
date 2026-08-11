@@ -106,17 +106,25 @@ PORTFOLIO_LAYOUT_STYLE = <<~HTML.freeze
     .repository-grid {
       align-items: start !important;
       display: grid !important;
-      gap: 0.5rem;
+      gap: 1rem;
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .repository-grid .repo {
-      padding: 0.35rem !important;
+      max-width: 100% !important;
+      padding: 0 !important;
+      width: 100% !important;
+    }
+
+    .repository-grid .repo > a {
+      display: block;
       width: 100%;
     }
 
     .repository-grid .repo img {
-      display: block;
+      height: auto;
+      max-width: 100%;
+      width: 100% !important;
     }
 
     @media (max-width: 767.98px) {

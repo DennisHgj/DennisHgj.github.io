@@ -30,4 +30,4 @@ nav_order: 4
 </div>
 {% endif %}
 
-This list includes repositories linked from publications and projects discussed on this site. [View all public repositories on GitHub]({{ site.data.repositories.all_repositories_url }}).
+This list highlights repositories maintained under my GitHub account and directly connected to my recent research or this website. [View all public repositories on GitHub]({{ site.data.repositories.all_repositories_url }}).
