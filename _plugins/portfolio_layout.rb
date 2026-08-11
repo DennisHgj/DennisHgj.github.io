@@ -2,90 +2,105 @@
 
 PORTFOLIO_LAYOUT_STYLE = <<~HTML.freeze
   <style id="portfolio-layout-style">
-    .projects .row.row-cols-1 > .col {
+    .projects .portfolio-project-grid {
       display: flex;
-      flex: 0 0 50%;
-      max-width: 50%;
-      width: 50%;
+      flex-wrap: wrap;
+      margin-left: -0.75rem;
+      margin-right: -0.75rem;
     }
 
-    .projects .row.row-cols-1 > .col > a {
-      color: inherit;
+    .projects .portfolio-project-column {
       display: flex;
-      text-decoration: none;
-      width: 100%;
+      flex: 0 0 50% !important;
+      max-width: 50% !important;
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
+      width: 50% !important;
     }
 
-    .projects .card {
+    .projects .portfolio-project-card {
+      display: flex;
+      flex-direction: column;
       min-height: 25rem;
       overflow: hidden;
       width: 100%;
     }
 
-    .projects .card > .row.no-gutters {
-      display: flex !important;
+    .projects .project-card-main {
+      color: inherit;
+      display: flex;
+      flex: 1 1 auto;
       flex-direction: column;
-      flex-wrap: nowrap;
-      height: 100%;
-      margin: 0 !important;
-    }
-
-    .projects .card > .row.no-gutters > .col-md-6:first-child {
-      background: rgba(127, 127, 127, 0.04);
-      flex: 0 0 11.5rem !important;
-      height: 11.5rem;
-      max-width: 100% !important;
+      text-decoration: none;
       width: 100%;
     }
 
-    .projects .card figure,
-    .projects .card picture {
+    .projects .project-card-main:hover {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .projects .project-card-image-shell {
+      align-items: center;
+      background: rgba(127, 127, 127, 0.04);
+      display: flex;
+      flex: 0 0 12rem;
+      height: 12rem;
+      justify-content: center;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .projects .project-card-image {
       display: block;
       height: 100%;
-      margin: 0;
-      width: 100%;
-    }
-
-    .projects .card img.card-img {
-      background: transparent;
-      border-radius: 0;
-      height: 100% !important;
       object-fit: contain;
       object-position: center;
       padding: 0.85rem 1rem;
       width: 100%;
     }
 
-    .projects .card > .row.no-gutters > .col-md-6:last-child {
+    .projects .portfolio-project-card .card-body {
       display: flex;
-      flex: 1 1 auto !important;
-      max-width: 100% !important;
-      width: 100%;
-    }
-
-    .projects .card-body {
-      display: flex;
+      flex: 1 1 auto;
       flex-direction: column;
-      padding: 1.15rem 1.25rem 1.1rem;
+      padding: 1.15rem 1.25rem 0.75rem;
       width: 100%;
     }
 
-    .projects .card-title {
+    .projects .portfolio-project-card .card-title {
       font-size: 1.35rem;
       line-height: 1.3;
       margin: 0 0 0.65rem;
       min-height: 3.5rem;
     }
 
-    .projects .card-text {
+    .projects .portfolio-project-card .card-text {
       font-size: 0.96rem;
       line-height: 1.55;
-      margin-bottom: 1rem;
+      margin: 0;
       min-height: 6rem;
     }
 
-    .projects .card-body > .row {
-      margin-top: auto !important;
+    .projects .project-card-footer {
+      align-items: center;
+      display: flex;
+      min-height: 3rem;
+      padding: 0 1.25rem 1rem;
+    }
+
+    .projects .project-card-action {
+      align-items: center;
+      color: var(--global-theme-color);
+      display: inline-flex;
+      font-weight: 500;
+      gap: 0.4rem;
+      text-decoration: none;
+    }
+
+    .projects .project-card-action:hover {
+      color: var(--global-hover-color);
+      text-decoration: none;
     }
 
     .repository-grid {
@@ -105,23 +120,23 @@ PORTFOLIO_LAYOUT_STYLE = <<~HTML.freeze
     }
 
     @media (max-width: 767.98px) {
-      .projects .row.row-cols-1 > .col {
-        flex-basis: 100%;
-        max-width: 100%;
-        width: 100%;
+      .projects .portfolio-project-column {
+        flex-basis: 100% !important;
+        max-width: 100% !important;
+        width: 100% !important;
       }
 
-      .projects .card {
+      .projects .portfolio-project-card {
         min-height: 0;
       }
 
-      .projects .card > .row.no-gutters > .col-md-6:first-child {
-        flex-basis: 10.5rem !important;
-        height: 10.5rem;
+      .projects .project-card-image-shell {
+        flex-basis: 11rem;
+        height: 11rem;
       }
 
-      .projects .card-title,
-      .projects .card-text {
+      .projects .portfolio-project-card .card-title,
+      .projects .portfolio-project-card .card-text {
         min-height: 0;
       }
 

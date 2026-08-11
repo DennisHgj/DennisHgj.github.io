@@ -21,7 +21,7 @@ nav_order: 4
 
 {% if site.data.repositories.research_repos %}
 
-## Research and multimodal AI
+## Selected repositories
 
 <div class="repositories repository-grid">
   {% for repo in site.data.repositories.research_repos %}
@@ -30,15 +30,4 @@ nav_order: 4
 </div>
 {% endif %}
 
-{% if site.data.repositories.software_repos %}
-
-## Scientific software and earlier work
-
-<div class="repositories repository-grid">
-  {% for repo in site.data.repositories.software_repos %}
-    {% include repository/repo.liquid repository=repo %}
-  {% endfor %}
-</div>
-{% endif %}
-
-The lists above prioritize research code and substantial public projects. [View all public repositories on GitHub]({{ site.data.repositories.all_repositories_url }}).
+This list includes repositories linked from publications and projects discussed on this site. [View all public repositories on GitHub]({{ site.data.repositories.all_repositories_url }}).
