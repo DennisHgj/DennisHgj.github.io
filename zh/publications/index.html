@@ -1,0 +1,222 @@
+<!DOCTYPE html> <html lang="zh-CN"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> 论文 | Guanjie Huang </title> <meta name="author" content="Guanjie Huang"> <meta name="description" content="音视频学习、多模态智能、目标跟踪与可信人工智能方向的论文成果。"> <meta name="keywords" content="audio-visual learning, multimodal learning, MLLM, cued speech recognition, uncertainty estimation, audio deepfake detection"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+  :root {
+    --max-content-width: 930px;
+  }
+</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=3116ba77db9ee1581d05bb3e86fbf7f1"> <link rel="canonical" href="https://dennishgj.github.io/zh/publications/"> <script src="/assets/js/theme.js?v=5286c3e4c334d0ecb8fc0c40ff4fa7ec"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> <link rel="stylesheet" href="/assets/al_email_protect/css/email-protect.css"> <link rel="alternate" hreflang="en" href="https://DennisHgj.github.io/publications/"> <link rel="alternate" hreflang="zh-CN" href="https://DennisHgj.github.io/zh/publications/"> <link rel="alternate" hreflang="x-default" href="https://DennisHgj.github.io/publications/"> <style id="publication-keyword-style">
+  .pub-keywords {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin: 0.45rem 0 0.15rem;
+  }
+
+  .pub-keyword {
+    border: 1px solid var(--global-theme-color);
+    border-radius: 999px;
+    color: var(--global-theme-color);
+    font-size: 0.78rem;
+    font-weight: 500;
+    line-height: 1.35;
+    padding: 0.12rem 0.55rem;
+  }
+</style> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/zh/"> <span class="font-weight-bold">Guanjie</span> Huang </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item active"><a class="nav-link" href="/zh/">首页</a></li> <li class="nav-item active"> <a class="nav-link" href="/zh/publications/">论文</a> </li> <li class="nav-item "> <a class="nav-link" href="/zh/projects/">项目</a> </li> <li class="nav-item "> <a class="nav-link" href="/zh/repositories/">代码</a> </li> <li class="nav-item "> <a class="nav-link" href="/zh/cv/">简历</a> </li> <li class="nav-item language-switcher"><a class="nav-link" href="/publications/" hreflang="en" title="Switch to English">English</a></li><li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="打开搜索"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="切换主题" aria-label="切换配色主题"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">论文</h1> <p class="post-description">音视频学习、多模态智能、目标跟踪与可信人工智能方向的论文成果。</p> </header> <article> <script src="/assets/js/bibsearch.js?v=1bc438ca9037884cc579601c09afd847" type="module"></script> <p><input type="text" id="bibsearch" spellcheck="false" autocomplete="off" class="search bibsearch-form-input" placeholder="Type to filter"></p> <div class="publications"> <h2 class="bibliography">2026</h2> <ol class="bibliography"> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">TASLP</abbr> </div> <div id="huang2026smp" class="col-sm-8"> <div class="title">Semantic Modulated Prompting for Few-Shot Audio-Visual Classification</div> <div class="author"> <em>Guanjie Huang</em>, Yawen Cui, Danny Hin Kwok Tsang, and <span class="more-authors" title="click to view 2 位其他作者" onclick=" var element=this; element.setAttribute('title', ''); var more_authors_text=element.textContent == '2 位其他作者' ? 'Wenwu Wang, Li Liu' : '2 位其他作者'; var cursorPosition=0; var textAdder=setInterval(function(){ element.innerHTML = more_authors_text.substring(0, cursorPosition + 1); if (++cursorPosition == more_authors_text.length){ clearInterval(textAdder); } }, '10'); ">2 位其他作者</span> </div> <div class="periodical"> <em>IEEE/ACM Transactions on Audio, Speech, and Language Processing</em>, 2026 </div> <div class="periodical"> </div> <div class="pub-keywords" aria-label="论文关键词"><span class="pub-keyword">音视频学习</span><span class="pub-keyword">小样本学习</span><span class="pub-keyword">提示调优</span><span class="pub-keyword">模态重平衡</span></div><div class="links"> <a href="https://doi.org/10.1109/TASLPRO.2026.3654246" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">DOI</a> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> <a href="https://doi.org/10.1109/TASLPRO.2026.3654246" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">HTML</a> <a href="https://github.com/DennisHgj/SMP_FSAVC" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Code</a> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">huang2026smp</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Semantic Modulated Prompting for Few-Shot Audio-Visual Classification}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Huang, Guanjie and Cui, Yawen and Tsang, Danny Hin Kwok and Wang, Wenwu and Liu, Li}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{IEEE/ACM Transactions on Audio, Speech, and Language Processing}</span><span class="p">,</span>
+  <span class="na">volume</span> <span class="p">=</span> <span class="s">{34}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{723--736}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2026}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.1109/TASLPRO.2026.3654246}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">ICASSP</abbr> </div> <div id="huang2026lend" class="col-sm-8"> <div class="title">Lend a Hand: Semi Training-Free Cued Speech Recognition via MLLM-Driven Hand Modeling</div> <div class="author"> <em>Guanjie Huang</em>, Danny H. K. Tsang, Xiao-Ping Zhang, and <span class="more-authors" title="click to view 1 more author" onclick=" var element=this; element.setAttribute('title', ''); var more_authors_text=element.textContent == '1 more author' ? 'Li Liu' : '1 more author'; var cursorPosition=0; var textAdder=setInterval(function(){ element.innerHTML = more_authors_text.substring(0, cursorPosition + 1); if (++cursorPosition == more_authors_text.length){ clearInterval(textAdder); } }, '10'); ">1 more author</span> </div> <div class="periodical"> <em>In IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)</em>, 2026 </div> <div class="periodical"> </div> <div class="pub-keywords" aria-label="论文关键词"><span class="pub-keyword">线索语识别</span><span class="pub-keyword">多模态大模型</span><span class="pub-keyword">免训练学习</span><span class="pub-keyword">视觉语音</span></div><div class="links"> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> <a href="https://arxiv.org/abs/2503.21785" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">HTML</a> <a href="https://github.com/DennisHgj/STF_ACSR" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Code</a> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">huang2026lend</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Lend a Hand: Semi Training-Free Cued Speech Recognition via MLLM-Driven Hand Modeling}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Huang, Guanjie and Tsang, Danny H. K. and Zhang, Xiao-Ping and Liu, Li}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2026}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">ACM MM</abbr> </div> <div id="xie2026phyavbench" class="col-sm-8"> <div class="title">PhyAVBench: A Physical-Centric Audio-Visual Benchmark for Video Generation</div> <div class="author"> Tianxin Xie, Wentao Lei, <em>Guanjie Huang</em>, and <span class="more-authors" title="click to view 1 more author" onclick=" var element=this; element.setAttribute('title', ''); var more_authors_text=element.textContent == '1 more author' ? ' others' : '1 more author'; var cursorPosition=0; var textAdder=setInterval(function(){ element.innerHTML = more_authors_text.substring(0, cursorPosition + 1); if (++cursorPosition == more_authors_text.length){ clearInterval(textAdder); } }, '10'); ">1 more author</span> </div> <div class="periodical"> <em>In Proceedings of the ACM International Conference on Multimedia</em><span style="margin-left: 0.5rem; white-space: nowrap">口头报告。</span> , 2026 </div> <div class="periodical"> </div> <div class="pub-keywords" aria-label="论文关键词"><span class="pub-keyword">音视频生成</span><span class="pub-keyword">物理规律对齐</span><span class="pub-keyword">评测基准</span><span class="pub-keyword">文本到音视频</span></div><div class="links"> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> <a href="https://arxiv.org/abs/2512.23994" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">HTML</a> <a href="https://imxtx.github.io/PhyAVBench/" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Website</a> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">xie2026phyavbench</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{PhyAVBench: A Physical-Centric Audio-Visual Benchmark for Video Generation}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Xie, Tianxin and Lei, Wentao and Huang, Guanjie and others}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{Proceedings of the ACM International Conference on Multimedia}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2026}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> </ol> <h2 class="bibliography">2025</h2> <ol class="bibliography"> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">ACM MM</abbr> </div> <div id="huang2025cuedagent" class="col-sm-8"> <div class="title">Cued-Agent: A Multi-Agent Framework for Automatic Cued Speech Recognition</div> <div class="author"> <em>Guanjie Huang</em>, Danny H. K. Tsang, Shan Yang, and <span class="more-authors" title="click to view 2 位其他作者" onclick=" var element=this; element.setAttribute('title', ''); var more_authors_text=element.textContent == '2 位其他作者' ? 'Guangzhi Lei, Li Liu' : '2 位其他作者'; var cursorPosition=0; var textAdder=setInterval(function(){ element.innerHTML = more_authors_text.substring(0, cursorPosition + 1); if (++cursorPosition == more_authors_text.length){ clearInterval(textAdder); } }, '10'); ">2 位其他作者</span> </div> <div class="periodical"> <em>In Proceedings of the ACM International Conference on Multimedia</em><span style="margin-left: 0.5rem; white-space: nowrap">口头报告。</span> , 2025 </div> <div class="periodical"> </div> <div class="pub-keywords" aria-label="论文关键词"><span class="pub-keyword">线索语识别</span><span class="pub-keyword">多智能体系统</span><span class="pub-keyword">多模态学习</span><span class="pub-keyword">大模型自校正</span></div><div class="links"> <a class="award btn btn-sm z-depth-0" role="button">学生差旅奖</a> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> <a href="https://arxiv.org/abs/2508.00391" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">HTML</a> <a href="https://github.com/DennisHgj/Cued-Agent" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Code</a> </div> <div class="award hidden d-print-inline"> <p></p> <p>Recipient of an ACM Multimedia 2025 学生差旅奖.</p> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">huang2025cuedagent</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Cued-Agent: A Multi-Agent Framework for Automatic Cued Speech Recognition}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Huang, Guanjie and Tsang, Danny H. K. and Yang, Shan and Lei, Guangzhi and Liu, Li}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{Proceedings of the ACM International Conference on Multimedia}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">CVPRW</abbr> </div> <div id="zhang2025underwater" class="col-sm-8"> <div class="title">Underwater Camouflaged Object Tracking Meets Vision-Language SAM2</div> <div class="author"> Chunhui Zhang, Li Liu, <em>Guanjie Huang</em>, and <span class="more-authors" title="click to view 5 位其他作者" onclick=" var element=this; element.setAttribute('title', ''); var more_authors_text=element.textContent == '5 位其他作者' ? 'Zhipeng Zhang, Hao Wen, Xi Zhou, Shiming Ge, Yanfeng Wang' : '5 位其他作者'; var cursorPosition=0; var textAdder=setInterval(function(){ element.innerHTML = more_authors_text.substring(0, cursorPosition + 1); if (++cursorPosition == more_authors_text.length){ clearInterval(textAdder); } }, '10'); ">5 位其他作者</span> </div> <div class="periodical"> <em>In IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops</em>, 2025 </div> <div class="periodical"> </div> <div class="pub-keywords" aria-label="论文关键词"><span class="pub-keyword">水下目标跟踪</span><span class="pub-keyword">伪装目标</span><span class="pub-keyword">视觉语言模型</span><span class="pub-keyword">SAM2</span></div><div class="links"> <a class="award btn btn-sm z-depth-0" role="button">杰出论文</a> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> <a href="https://arxiv.org/abs/2409.16902" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">HTML</a> <a href="https://github.com/983632847/Awesome-Multimodal-Object-Tracking/tree/main/UW-COT220" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Code</a> </div> <div class="award hidden d-print-inline"> <p></p> <p>杰出论文 Award at the CV4Animals Workshop.</p> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">zhang2025underwater</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Underwater Camouflaged Object Tracking Meets Vision-Language SAM2}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Zhang, Chunhui and Liu, Li and Huang, Guanjie and Zhang, Zhipeng and Wen, Hao and Zhou, Xi and Ge, Shiming and Wang, Yanfeng}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> </ol> <h2 class="bibliography">2024</h2> <ol class="bibliography"> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">NeurIPS</abbr> </div> <div id="zhang2024webuot" class="col-sm-8"> <div class="title">WebUOT-1M: Advancing Deep Underwater Object Tracking with a Million-Scale Benchmark</div> <div class="author"> Chunhui Zhang, Li Liu, <em>Guanjie Huang</em>, and <span class="more-authors" title="click to view 3 位其他作者" onclick=" var element=this; element.setAttribute('title', ''); var more_authors_text=element.textContent == '3 位其他作者' ? 'Hao Wen, Xi Zhou, Yanfeng Wang' : '3 位其他作者'; var cursorPosition=0; var textAdder=setInterval(function(){ element.innerHTML = more_authors_text.substring(0, cursorPosition + 1); if (++cursorPosition == more_authors_text.length){ clearInterval(textAdder); } }, '10'); ">3 位其他作者</span> </div> <div class="periodical"> <em>In Advances in Neural Information Processing Systems</em>, 2024 </div> <div class="periodical"> </div> <div class="pub-keywords" aria-label="论文关键词"><span class="pub-keyword">水下目标跟踪</span><span class="pub-keyword">大规模评测基准</span><span class="pub-keyword">多模态跟踪</span><span class="pub-keyword">目标跟踪</span></div><div class="links"> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> <a href="https://arxiv.org/abs/2405.19818" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">HTML</a> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">zhang2024webuot</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{WebUOT-1M: Advancing Deep Underwater Object Tracking with a Million-Scale Benchmark}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Zhang, Chunhui and Liu, Li and Huang, Guanjie and Wen, Hao and Zhou, Xi and Wang, Yanfeng}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{Advances in Neural Information Processing Systems}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2024}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">ICSR</abbr> </div> <div id="huang2024content" class="col-sm-8"> <div class="title">Content-Aware Efficient Learner for Audio-Visual Emotion Recognition</div> <div class="author"> <em>Guanjie Huang</em>, Weilin Lin, and Li Liu </div> <div class="periodical"> <em>In Social Robotics</em>, 2024 </div> <div class="periodical"> </div> <div class="pub-keywords" aria-label="论文关键词"><span class="pub-keyword">音视频情感识别</span><span class="pub-keyword">参数高效学习</span><span class="pub-keyword">多模态融合</span><span class="pub-keyword">情感计算</span></div><div class="links"> <a class="award btn btn-sm z-depth-0" role="button">最佳学生论文提名</a> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> <a href="https://link.springer.com/book/10.1007/978-981-96-1151-5" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">HTML</a> </div> <div class="award hidden d-print-inline"> <p></p> <p>Nominated for Best Student Paper at ICSR 2024.</p> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">huang2024content</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Content-Aware Efficient Learner for Audio-Visual Emotion Recognition}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Huang, Guanjie and Lin, Weilin and Liu, Li}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{Social Robotics}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{31--40}</span><span class="p">,</span>
+  <span class="na">publisher</span> <span class="p">=</span> <span class="s">{Springer Nature Singapore}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2024}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> </ol> <h2 class="bibliography">2023</h2> <ol class="bibliography"><li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">TPAMI</abbr> </div> <div id="zhang2023webuav" class="col-sm-8"> <div class="title">WebUAV-3M: A Benchmark Unveiling the Power of Million-Scale Deep UAV Tracking</div> <div class="author"> Chunhui Zhang, <em>Guanjie Huang</em>, Li Liu, and <span class="more-authors" title="click to view 5 位其他作者" onclick=" var element=this; element.setAttribute('title', ''); var more_authors_text=element.textContent == '5 位其他作者' ? 'Shan Huang, Yinan Yang, Xiang Wan, Shiming Ge, Dacheng Tao' : '5 位其他作者'; var cursorPosition=0; var textAdder=setInterval(function(){ element.innerHTML = more_authors_text.substring(0, cursorPosition + 1); if (++cursorPosition == more_authors_text.length){ clearInterval(textAdder); } }, '10'); ">5 位其他作者</span> </div> <div class="periodical"> <em>IEEE Transactions on Pattern Analysis and Machine Intelligence</em><span style="margin-left: 0.5rem; white-space: nowrap">共同第一作者。</span> , 2023 </div> <div class="periodical"> </div> <div class="pub-keywords" aria-label="论文关键词"><span class="pub-keyword">无人机目标跟踪</span><span class="pub-keyword">多模态跟踪</span><span class="pub-keyword">大规模数据集</span><span class="pub-keyword">视觉目标跟踪</span></div><div class="links"> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> <a href="https://arxiv.org/abs/2201.07425" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">HTML</a> <a href="https://github.com/983632847/WebUAV-3M" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Code</a> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">zhang2023webuav</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{WebUAV-3M: A Benchmark Unveiling the Power of Million-Scale Deep UAV Tracking}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Zhang, Chunhui and Huang, Guanjie and Liu, Li and Huang, Shan and Yang, Yinan and Wan, Xiang and Ge, Shiming and Tao, Dacheng}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{IEEE Transactions on Pattern Analysis and Machine Intelligence}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2023}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li></ol> </div> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Guanjie Huang. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. </div> </footer> <script>
+  window.alFolio = {
+    compatBootstrap: false
+  };
+</script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/al_math/js/mathjax-setup.js"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="输入关键词开始搜索"></ninja-keys> <script src="/assets/al_search/js/search-setup.js"></script> <script>
+// get the ninja-keys element
+const ninja = document.querySelector('ninja-keys');
+
+// add the home and posts menu items
+ninja.data = [{
+    id: "nav-about",
+    title: "about",
+    section: "Navigation",
+    handler: () => {
+      window.location.href = "/";
+    },
+  },{id: "nav-publications",
+          title: "publications",
+          description: "Selected publications in audio-visual learning, multimodal intelligence, tracking, and trustworthy AI.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/publications/";
+          },
+        },{id: "nav-projects",
+          title: "projects",
+          description: "Selected research projects in audio-visual intelligence, multimodal agents, model reliability, and large-scale datasets.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/projects/";
+          },
+        },{id: "nav-repositories",
+          title: "repositories",
+          description: "Open-source research implementations, datasets, and website code.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/repositories/";
+          },
+        },{id: "nav-cv",
+          title: "CV",
+          description: "Research experience, education, selected publications, projects, and awards. A detailed Chinese PDF is available from the download button.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/cv/";
+          },
+        },{id: "news-cued-agent-was-selected-for-an-oral-presentation-at-acm-multimedia-2025-together-with-a-student-travel-award-paper-code",
+          title: 'Cued-Agent was selected for an oral presentation at ACM Multimedia 2025, together with...',
+          description: "",
+          section: "News",},{id: "news-our-paper-semantic-modulated-prompting-for-few-shot-audio-visual-classification-was-published-in-ieee-acm-taslp-paper",
+          title: 'Our paper Semantic Modulated Prompting for Few-Shot Audio-Visual Classification was published in IEEE/ACM...',
+          description: "",
+          section: "News",},{id: "news-presented-stf-acsr-our-semi-training-free-cued-speech-recognition-work-at-icassp-2026-paper-code",
+          title: 'Presented STF-ACSR, our semi training-free cued speech recognition work, at ICASSP 2026. Paper...',
+          description: "",
+          section: "News",},{id: "projects-glad-audio-deepfake-detection",
+          title: 'GLAD: Audio Deepfake Detection',
+          description: "Global-local SSL features, sample-adaptive gating, and SaniBoost improve detection under unseen attacks and domain shifts.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/audio-deepfake-detection/";
+            },},{id: "projects-cued-agent",
+          title: 'Cued-Agent',
+          description: "Four specialized agents connect hand-cue recognition, lip reading, prompt-based decoding, and language-level self-correction.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/cued-agent/";
+            },},{id: "projects-evidential-uncertainty-for-in-context-learning",
+          title: 'Evidential Uncertainty for In-Context Learning',
+          description: "Single-pass, query-level evidential uncertainty reduces prompt dependence and the token cost of reliable in-context learning.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/evidential-uncertainty/";
+            },},{id: "projects-phyavbench",
+          title: 'PhyAVBench',
+          description: "Controlled prompt pairs test whether generated sound changes correctly when one underlying physical condition changes.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/phyavbench/";
+            },},{id: "projects-semantic-modulated-prompting",
+          title: 'Semantic Modulated Prompting',
+          description: "Semantic prompts align asynchronous audio-visual evidence and dynamically rebalance weak modalities in few-shot learning.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/semantic-modulated-prompting/";
+            },},{id: "projects-stf-acsr",
+          title: 'STF-ACSR',
+          description: "An MLLM recognizes informative hand cues without task-specific training, and a single linear layer injects them into a lip-reading model.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/stf-acsr/";
+            },},{id: "projects-webuav-3m",
+          title: 'WebUAV-3M',
+          description: "A 3.3M-frame UAV tracking benchmark with dense boxes, language specifications, audio descriptions, and diverse target categories.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/webuav-3m/";
+            },},{
+        id: 'social-cv',
+        title: 'CV',
+        section: 'Socials',
+        handler: () => {
+          window.open("/assets/pdf/Guanjie_Huang_CV_zh.pdf", "_blank");
+        },
+      },{
+        id: 'social-email',
+        title: 'email',
+        section: 'Socials',
+        handler: () => {
+          window.open("mailto:%67%68%75%61%6E%67%35%36%35@%63%6F%6E%6E%65%63%74.%68%6B%75%73%74-%67%7A.%65%64%75.%63%6E", "_blank");
+        },
+      },{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/DennisHgj", "_blank");
+        },
+      },{
+        id: 'social-scholar',
+        title: 'Google Scholar',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://scholar.google.com/citations?user=cH80kpEAAAAJ", "_blank");
+        },
+      },{
+        id: 'social-orcid',
+        title: 'ORCID',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://orcid.org/0000-0003-1977-3647", "_blank");
+        },
+      },{
+      id: 'light-theme',
+      title: '切换主题 to light',
+      description: 'Change the theme of the site to Light',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("light");
+      },
+    },
+    {
+      id: 'dark-theme',
+      title: '切换主题 to dark',
+      description: 'Change the theme of the site to Dark',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("dark");
+      },
+    },
+    {
+      id: 'system-theme',
+      title: 'Use system default theme',
+      description: 'Change the theme of the site to System Default',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("system");
+      },
+    },];
+
+</script> <script src="/assets/al_search/js/shortcut-key.js"></script> <script defer src="/assets/al_email_protect/js/email-protect.js"></script> </body> </html>
