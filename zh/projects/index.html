@@ -5,90 +5,105 @@
 </style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=3116ba77db9ee1581d05bb3e86fbf7f1"> <link rel="canonical" href="https://dennishgj.github.io/zh/projects/"> <script src="/assets/js/theme.js?v=5286c3e4c334d0ecb8fc0c40ff4fa7ec"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
     initTheme();
   </script> <link rel="stylesheet" href="/assets/al_email_protect/css/email-protect.css"> <link rel="alternate" hreflang="en" href="https://DennisHgj.github.io/projects/"> <link rel="alternate" hreflang="zh-CN" href="https://DennisHgj.github.io/zh/projects/"> <link rel="alternate" hreflang="x-default" href="https://DennisHgj.github.io/projects/"> <style id="portfolio-layout-style">
-  .projects .row.row-cols-1 > .col {
+  .projects .portfolio-project-grid {
     display: flex;
-    flex: 0 0 50%;
-    max-width: 50%;
-    width: 50%;
+    flex-wrap: wrap;
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
   }
 
-  .projects .row.row-cols-1 > .col > a {
-    color: inherit;
+  .projects .portfolio-project-column {
     display: flex;
-    text-decoration: none;
-    width: 100%;
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    width: 50% !important;
   }
 
-  .projects .card {
+  .projects .portfolio-project-card {
+    display: flex;
+    flex-direction: column;
     min-height: 25rem;
     overflow: hidden;
     width: 100%;
   }
 
-  .projects .card > .row.no-gutters {
-    display: flex !important;
+  .projects .project-card-main {
+    color: inherit;
+    display: flex;
+    flex: 1 1 auto;
     flex-direction: column;
-    flex-wrap: nowrap;
-    height: 100%;
-    margin: 0 !important;
-  }
-
-  .projects .card > .row.no-gutters > .col-md-6:first-child {
-    background: rgba(127, 127, 127, 0.04);
-    flex: 0 0 11.5rem !important;
-    height: 11.5rem;
-    max-width: 100% !important;
+    text-decoration: none;
     width: 100%;
   }
 
-  .projects .card figure,
-  .projects .card picture {
+  .projects .project-card-main:hover {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .projects .project-card-image-shell {
+    align-items: center;
+    background: rgba(127, 127, 127, 0.04);
+    display: flex;
+    flex: 0 0 12rem;
+    height: 12rem;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .projects .project-card-image {
     display: block;
     height: 100%;
-    margin: 0;
-    width: 100%;
-  }
-
-  .projects .card img.card-img {
-    background: transparent;
-    border-radius: 0;
-    height: 100% !important;
     object-fit: contain;
     object-position: center;
     padding: 0.85rem 1rem;
     width: 100%;
   }
 
-  .projects .card > .row.no-gutters > .col-md-6:last-child {
+  .projects .portfolio-project-card .card-body {
     display: flex;
-    flex: 1 1 auto !important;
-    max-width: 100% !important;
-    width: 100%;
-  }
-
-  .projects .card-body {
-    display: flex;
+    flex: 1 1 auto;
     flex-direction: column;
-    padding: 1.15rem 1.25rem 1.1rem;
+    padding: 1.15rem 1.25rem 0.75rem;
     width: 100%;
   }
 
-  .projects .card-title {
+  .projects .portfolio-project-card .card-title {
     font-size: 1.35rem;
     line-height: 1.3;
     margin: 0 0 0.65rem;
     min-height: 3.5rem;
   }
 
-  .projects .card-text {
+  .projects .portfolio-project-card .card-text {
     font-size: 0.96rem;
     line-height: 1.55;
-    margin-bottom: 1rem;
+    margin: 0;
     min-height: 6rem;
   }
 
-  .projects .card-body > .row {
-    margin-top: auto !important;
+  .projects .project-card-footer {
+    align-items: center;
+    display: flex;
+    min-height: 3rem;
+    padding: 0 1.25rem 1rem;
+  }
+
+  .projects .project-card-action {
+    align-items: center;
+    color: var(--global-theme-color);
+    display: inline-flex;
+    font-weight: 500;
+    gap: 0.4rem;
+    text-decoration: none;
+  }
+
+  .projects .project-card-action:hover {
+    color: var(--global-hover-color);
+    text-decoration: none;
   }
 
   .repository-grid {
@@ -108,23 +123,23 @@
   }
 
   @media (max-width: 767.98px) {
-    .projects .row.row-cols-1 > .col {
-      flex-basis: 100%;
-      max-width: 100%;
-      width: 100%;
+    .projects .portfolio-project-column {
+      flex-basis: 100% !important;
+      max-width: 100% !important;
+      width: 100% !important;
     }
 
-    .projects .card {
+    .projects .portfolio-project-card {
       min-height: 0;
     }
 
-    .projects .card > .row.no-gutters > .col-md-6:first-child {
-      flex-basis: 10.5rem !important;
-      height: 10.5rem;
+    .projects .project-card-image-shell {
+      flex-basis: 11rem;
+      height: 11rem;
     }
 
-    .projects .card-title,
-    .projects .card-text {
+    .projects .portfolio-project-card .card-title,
+    .projects .portfolio-project-card .card-text {
       min-height: 0;
     }
 
@@ -132,7 +147,7 @@
       grid-template-columns: minmax(0, 1fr);
     }
   }
-</style> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/zh/"> <span class="font-weight-bold">Guanjie</span> Huang </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/zh/">首页</a> </li> <li class="nav-item "> <a class="nav-link" href="/zh/publications/">论文</a> </li> <li class="nav-item active"> <a class="nav-link" href="/zh/projects/">项目</a> </li> <li class="nav-item "> <a class="nav-link" href="/zh/repositories/">代码</a> </li> <li class="nav-item "> <a class="nav-link" href="/zh/cv/">简历</a> </li> <li class="nav-item language-switcher"><a class="nav-link" href="/projects/" hreflang="en" title="Switch to English">English</a></li><li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="打开搜索"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="切换主题" aria-label="切换配色主题"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">项目</h1> <p class="post-description">音视频智能、多模态智能体、模型可靠性与大规模数据集方向的代表项目。</p> </header> <article> <div class="projects"> <h2 class="category">研究</h2> <div class="container"> <div class="row row-cols-1 row-cols-md-2"> <div class="col mb-4"> <a href="/zh/projects/cued-agent/"> <div class="card h-100 hoverable"> <div class="row no-gutters"> <div class="col-md-6"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/cued-agent-framework-preview.webp" sizes="(min-width: 768px) 156px, 50vw"></source> <img src="/assets/img/projects/cued-agent-framework-preview.webp" class="card-img" width="100%" height="auto" alt="project thumbnail" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </picture> </figure> </div> <div class="col-md-6"> <div class="card-body"> <h3 class="card-title">Cued-Agent</h3> <p class="card-text">四个专用智能体协同完成手势识别、唇读、手唇融合与语言级自校正，无需端到端训练整个系统。</p> <div class="row ml-1 mr-1 p-0"> <div class="github-icon"> <div class="icon" data-toggle="tooltip" title="Code Repository"> <a href="https://github.com/DennisHgj/Cued-Agent" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-github gh-icon"></i></a> </div> </div> </div> </div> </div> </div> </div> </a> </div> <div class="col mb-4"> <a href="/zh/projects/stf-acsr/"> <div class="card h-100 hoverable"> <div class="row no-gutters"> <div class="col-md-6"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/stf-acsr-framework-preview.webp" sizes="(min-width: 768px) 156px, 50vw"></source> <img src="/assets/img/projects/stf-acsr-framework-preview.webp" class="card-img" width="100%" height="auto" alt="project thumbnail" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </picture> </figure> </div> <div class="col-md-6"> <div class="card-body"> <h3 class="card-title">STF-ACSR</h3> <p class="card-text">用多模态大模型免训练识别关键手势，再以单层线性映射将手势提示注入预训练唇读模型。</p> <div class="row ml-1 mr-1 p-0"> <div class="github-icon"> <div class="icon" data-toggle="tooltip" title="Code Repository"> <a href="https://github.com/DennisHgj/STF_ACSR" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-github gh-icon"></i></a> </div> </div> </div> </div> </div> </div> </div> </a> </div> <div class="col mb-4"> <a href="/zh/projects/semantic-modulated-prompting/"> <div class="card h-100 hoverable"> <div class="row no-gutters"> <div class="col-md-6"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/semantic-modulated-prompting-framework-full-480.webp 480w,/assets/img/projects/semantic-modulated-prompting-framework-full-800.webp 800w,/assets/img/projects/semantic-modulated-prompting-framework-full-1400.webp 1400w," type="image/webp" sizes="(min-width: 768px) 156px, 50vw"></source> <img src="/assets/img/projects/semantic-modulated-prompting-framework-full.png" class="card-img" width="100%" height="auto" alt="project thumbnail" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </picture> </figure> </div> <div class="col-md-6"> <div class="card-body"> <h3 class="card-title">Semantic Modulated Prompting</h3> <p class="card-text">以语义提示缓解小样本音视频学习中的过拟合、时序异步与模态失衡，并保持参数高效。</p> <div class="row ml-1 mr-1 p-0"> <div class="github-icon"> <div class="icon" data-toggle="tooltip" title="Code Repository"> <a href="https://github.com/DennisHgj/SMP_FSAVC" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-github gh-icon"></i></a> </div> </div> </div> </div> </div> </div> </div> </a> </div> <div class="col mb-4"> <a href="/zh/projects/audio-deepfake-detection/"> <div class="card h-100 hoverable"> <div class="row no-gutters"> <div class="col-md-6"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/audio-deepfake-glad-framework-full-480.webp 480w,/assets/img/projects/audio-deepfake-glad-framework-full-800.webp 800w,/assets/img/projects/audio-deepfake-glad-framework-full-1400.webp 1400w," type="image/webp" sizes="(min-width: 768px) 156px, 50vw"></source> <img src="/assets/img/projects/audio-deepfake-glad-framework-full.png" class="card-img" width="100%" height="auto" alt="project thumbnail" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </picture> </figure> </div> <div class="col-md-6"> <div class="card-body"> <h3 class="card-title">GLAD 音频伪造检测</h3> <p class="card-text">结合全局-局部自监督表征、样本级自适应门控与 SaniBoost，提升未知攻击及跨域检测能力。</p> <div class="row ml-1 mr-1 p-0"> </div> </div> </div> </div> </div> </a> </div> <div class="col mb-4"> <a href="/zh/projects/evidential-uncertainty/"> <div class="card h-100 hoverable"> <div class="row no-gutters"> <div class="col-md-6"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/evidential-uncertainty-framework-full-480.webp 480w,/assets/img/projects/evidential-uncertainty-framework-full-800.webp 800w,/assets/img/projects/evidential-uncertainty-framework-full-1400.webp 1400w," type="image/webp" sizes="(min-width: 768px) 156px, 50vw"></source> <img src="/assets/img/projects/evidential-uncertainty-framework-full.png" class="card-img" width="100%" height="auto" alt="project thumbnail" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </picture> </figure> </div> <div class="col-md-6"> <div class="card-body"> <h3 class="card-title">上下文学习的证据不确定性</h3> <p class="card-text">以单次前向传播完成查询级不确定性估计，减少对提示和重复生成的依赖并显著降低 Token 成本。</p> <div class="row ml-1 mr-1 p-0"> </div> </div> </div> </div> </div> </a> </div> </div> </div> <h2 class="category">评测基准</h2> <div class="container"> <div class="row row-cols-1 row-cols-md-2"> <div class="col mb-4"> <a href="/zh/projects/phyavbench/"> <div class="card h-100 hoverable"> <div class="row no-gutters"> <div class="col-md-6"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/phyavbench-radar-preview.webp" sizes="(min-width: 768px) 156px, 50vw"></source> <img src="/assets/img/projects/phyavbench-radar-preview.webp" class="card-img" width="100%" height="auto" alt="project thumbnail" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </picture> </figure> </div> <div class="col-md-6"> <div class="card-body"> <h3 class="card-title">PhyAVBench</h3> <p class="card-text">通过只改变单一声学物理变量的成对提示，评估生成音频是否作出符合物理规律的响应。</p> <div class="row ml-1 mr-1 p-0"> </div> </div> </div> </div> </div> </a> </div> <div class="col mb-4"> <a href="/zh/projects/webuav-3m/"> <div class="card h-100 hoverable"> <div class="row no-gutters"> <div class="col-md-6"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/projects/webuav-representative-videos-preview.webp" sizes="(min-width: 768px) 156px, 50vw"></source> <img src="/assets/img/projects/webuav-representative-videos-preview.webp" class="card-img" width="100%" height="auto" alt="project thumbnail" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </picture> </figure> </div> <div class="col-md-6"> <div class="card-body"> <h3 class="card-title">WebUAV-3M</h3> <p class="card-text">包含 330 万帧、4500 个视频和 223 类目标，并加入自然语言规范与音频描述的无人机跟踪基准。</p> <div class="row ml-1 mr-1 p-0"> <div class="github-icon"> <div class="icon" data-toggle="tooltip" title="Code Repository"> <a href="https://github.com/983632847/WebUAV-3M" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-github gh-icon"></i></a> </div> </div> </div> </div> </div> </div> </div> </a> </div> </div> </div> </div> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Guanjie Huang. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. </div> </footer> <script>
+</style> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/zh/"> <span class="font-weight-bold">Guanjie</span> Huang </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/zh/">首页</a> </li> <li class="nav-item "> <a class="nav-link" href="/zh/publications/">论文</a> </li> <li class="nav-item active"> <a class="nav-link" href="/zh/projects/">项目</a> </li> <li class="nav-item "> <a class="nav-link" href="/zh/repositories/">代码</a> </li> <li class="nav-item "> <a class="nav-link" href="/zh/cv/">简历</a> </li> <li class="nav-item language-switcher"><a class="nav-link" href="/projects/" hreflang="en" title="Switch to English">English</a></li><li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="打开搜索"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="切换主题" aria-label="切换配色主题"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">项目</h1> <p class="post-description">音视频智能、多模态智能体、模型可靠性与大规模数据集方向的代表项目。</p> </header> <article> <div class="projects"> <h2 class="category">研究</h2> <div class="container"> <div class="row portfolio-project-grid"> <div class="col mb-4 portfolio-project-column"> <div class="card h-100 hoverable portfolio-project-card"> <a class="project-card-main" href="/zh/projects/cued-agent/"> <div class="project-card-image-shell"> <img class="project-card-image" src="/assets/img/projects/cued-agent-framework-preview.webp" alt="Cued-Agent 项目缩略图" loading="lazy"> </div> <div class="card-body"> <h3 class="card-title">Cued-Agent</h3> <p class="card-text">四个专用智能体协同完成手势识别、唇读、手唇融合与语言级自校正，无需端到端训练整个系统。</p> </div> </a> <div class="project-card-footer"> <a class="project-card-action" href="https://github.com/DennisHgj/Cued-Agent" target="_blank" rel="noopener" aria-label="Cued-Agent 代码仓库"> <i class="fa-brands fa-github" aria-hidden="true"></i><span>代码</span> </a> </div> </div> </div> <div class="col mb-4 portfolio-project-column"> <div class="card h-100 hoverable portfolio-project-card"> <a class="project-card-main" href="/zh/projects/stf-acsr/"> <div class="project-card-image-shell"> <img class="project-card-image" src="/assets/img/projects/stf-acsr-framework-preview.webp" alt="STF-ACSR 项目缩略图" loading="lazy"> </div> <div class="card-body"> <h3 class="card-title">STF-ACSR</h3> <p class="card-text">用多模态大模型免训练识别关键手势，再以单层线性映射将手势提示注入预训练唇读模型。</p> </div> </a> <div class="project-card-footer"> <a class="project-card-action" href="https://github.com/DennisHgj/STF_ACSR" target="_blank" rel="noopener" aria-label="STF-ACSR 代码仓库"> <i class="fa-brands fa-github" aria-hidden="true"></i><span>代码</span> </a> </div> </div> </div> <div class="col mb-4 portfolio-project-column"> <div class="card h-100 hoverable portfolio-project-card"> <a class="project-card-main" href="/zh/projects/semantic-modulated-prompting/"> <div class="project-card-image-shell"> <img class="project-card-image" src="/assets/img/projects/semantic-modulated-prompting-framework-full.png" alt="Semantic Modulated Prompting 项目缩略图" loading="lazy"> </div> <div class="card-body"> <h3 class="card-title">Semantic Modulated Prompting</h3> <p class="card-text">以语义提示缓解小样本音视频学习中的过拟合、时序异步与模态失衡，并保持参数高效。</p> </div> </a> <div class="project-card-footer"> <a class="project-card-action" href="https://github.com/DennisHgj/SMP_FSAVC" target="_blank" rel="noopener" aria-label="Semantic Modulated Prompting 代码仓库"> <i class="fa-brands fa-github" aria-hidden="true"></i><span>代码</span> </a> </div> </div> </div> <div class="col mb-4 portfolio-project-column"> <div class="card h-100 hoverable portfolio-project-card"> <a class="project-card-main" href="/zh/projects/audio-deepfake-detection/"> <div class="project-card-image-shell"> <img class="project-card-image" src="/assets/img/projects/audio-deepfake-glad-framework-full.png" alt="GLAD 音频伪造检测 项目缩略图" loading="lazy"> </div> <div class="card-body"> <h3 class="card-title">GLAD 音频伪造检测</h3> <p class="card-text">结合全局-局部自监督表征、样本级自适应门控与 SaniBoost，提升未知攻击及跨域检测能力。</p> </div> </a> <div class="project-card-footer"> <a class="project-card-action" href="/zh/projects/audio-deepfake-detection/"> <i class="fa-solid fa-arrow-right" aria-hidden="true"></i><span>项目详情</span> </a> </div> </div> </div> <div class="col mb-4 portfolio-project-column"> <div class="card h-100 hoverable portfolio-project-card"> <a class="project-card-main" href="/zh/projects/evidential-uncertainty/"> <div class="project-card-image-shell"> <img class="project-card-image" src="/assets/img/projects/evidential-uncertainty-framework-full.png" alt="上下文学习的证据不确定性 项目缩略图" loading="lazy"> </div> <div class="card-body"> <h3 class="card-title">上下文学习的证据不确定性</h3> <p class="card-text">以单次前向传播完成查询级不确定性估计，减少对提示和重复生成的依赖并显著降低 Token 成本。</p> </div> </a> <div class="project-card-footer"> <a class="project-card-action" href="/zh/projects/evidential-uncertainty/"> <i class="fa-solid fa-arrow-right" aria-hidden="true"></i><span>项目详情</span> </a> </div> </div> </div> </div> </div> <h2 class="category">评测基准</h2> <div class="container"> <div class="row portfolio-project-grid"> <div class="col mb-4 portfolio-project-column"> <div class="card h-100 hoverable portfolio-project-card"> <a class="project-card-main" href="/zh/projects/phyavbench/"> <div class="project-card-image-shell"> <img class="project-card-image" src="/assets/img/projects/phyavbench-radar-preview.webp" alt="PhyAVBench 项目缩略图" loading="lazy"> </div> <div class="card-body"> <h3 class="card-title">PhyAVBench</h3> <p class="card-text">通过只改变单一声学物理变量的成对提示，评估生成音频是否作出符合物理规律的响应。</p> </div> </a> <div class="project-card-footer"> <a class="project-card-action" href="/zh/projects/phyavbench/"> <i class="fa-solid fa-arrow-right" aria-hidden="true"></i><span>项目详情</span> </a> </div> </div> </div> <div class="col mb-4 portfolio-project-column"> <div class="card h-100 hoverable portfolio-project-card"> <a class="project-card-main" href="/zh/projects/webuav-3m/"> <div class="project-card-image-shell"> <img class="project-card-image" src="/assets/img/projects/webuav-representative-videos-preview.webp" alt="WebUAV-3M 项目缩略图" loading="lazy"> </div> <div class="card-body"> <h3 class="card-title">WebUAV-3M</h3> <p class="card-text">包含 330 万帧、4500 个视频和 223 类目标，并加入自然语言规范与音频描述的无人机跟踪基准。</p> </div> </a> <div class="project-card-footer"> <a class="project-card-action" href="https://github.com/983632847/WebUAV-3M" target="_blank" rel="noopener" aria-label="WebUAV-3M 代码仓库"> <i class="fa-brands fa-github" aria-hidden="true"></i><span>代码</span> </a> </div> </div> </div> </div> </div> </div> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Guanjie Huang. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. </div> </footer> <script>
   window.alFolio = {
     compatBootstrap: false
   };

@@ -5,90 +5,105 @@
 </style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=3116ba77db9ee1581d05bb3e86fbf7f1"> <link rel="canonical" href="https://dennishgj.github.io/zh/repositories/"> <script src="/assets/js/theme.js?v=5286c3e4c334d0ecb8fc0c40ff4fa7ec"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
     initTheme();
   </script> <link rel="stylesheet" href="/assets/al_email_protect/css/email-protect.css"> <link rel="alternate" hreflang="en" href="https://DennisHgj.github.io/repositories/"> <link rel="alternate" hreflang="zh-CN" href="https://DennisHgj.github.io/zh/repositories/"> <link rel="alternate" hreflang="x-default" href="https://DennisHgj.github.io/repositories/"> <style id="portfolio-layout-style">
-  .projects .row.row-cols-1 > .col {
+  .projects .portfolio-project-grid {
     display: flex;
-    flex: 0 0 50%;
-    max-width: 50%;
-    width: 50%;
+    flex-wrap: wrap;
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
   }
 
-  .projects .row.row-cols-1 > .col > a {
-    color: inherit;
+  .projects .portfolio-project-column {
     display: flex;
-    text-decoration: none;
-    width: 100%;
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    width: 50% !important;
   }
 
-  .projects .card {
+  .projects .portfolio-project-card {
+    display: flex;
+    flex-direction: column;
     min-height: 25rem;
     overflow: hidden;
     width: 100%;
   }
 
-  .projects .card > .row.no-gutters {
-    display: flex !important;
+  .projects .project-card-main {
+    color: inherit;
+    display: flex;
+    flex: 1 1 auto;
     flex-direction: column;
-    flex-wrap: nowrap;
-    height: 100%;
-    margin: 0 !important;
-  }
-
-  .projects .card > .row.no-gutters > .col-md-6:first-child {
-    background: rgba(127, 127, 127, 0.04);
-    flex: 0 0 11.5rem !important;
-    height: 11.5rem;
-    max-width: 100% !important;
+    text-decoration: none;
     width: 100%;
   }
 
-  .projects .card figure,
-  .projects .card picture {
+  .projects .project-card-main:hover {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .projects .project-card-image-shell {
+    align-items: center;
+    background: rgba(127, 127, 127, 0.04);
+    display: flex;
+    flex: 0 0 12rem;
+    height: 12rem;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .projects .project-card-image {
     display: block;
     height: 100%;
-    margin: 0;
-    width: 100%;
-  }
-
-  .projects .card img.card-img {
-    background: transparent;
-    border-radius: 0;
-    height: 100% !important;
     object-fit: contain;
     object-position: center;
     padding: 0.85rem 1rem;
     width: 100%;
   }
 
-  .projects .card > .row.no-gutters > .col-md-6:last-child {
+  .projects .portfolio-project-card .card-body {
     display: flex;
-    flex: 1 1 auto !important;
-    max-width: 100% !important;
-    width: 100%;
-  }
-
-  .projects .card-body {
-    display: flex;
+    flex: 1 1 auto;
     flex-direction: column;
-    padding: 1.15rem 1.25rem 1.1rem;
+    padding: 1.15rem 1.25rem 0.75rem;
     width: 100%;
   }
 
-  .projects .card-title {
+  .projects .portfolio-project-card .card-title {
     font-size: 1.35rem;
     line-height: 1.3;
     margin: 0 0 0.65rem;
     min-height: 3.5rem;
   }
 
-  .projects .card-text {
+  .projects .portfolio-project-card .card-text {
     font-size: 0.96rem;
     line-height: 1.55;
-    margin-bottom: 1rem;
+    margin: 0;
     min-height: 6rem;
   }
 
-  .projects .card-body > .row {
-    margin-top: auto !important;
+  .projects .project-card-footer {
+    align-items: center;
+    display: flex;
+    min-height: 3rem;
+    padding: 0 1.25rem 1rem;
+  }
+
+  .projects .project-card-action {
+    align-items: center;
+    color: var(--global-theme-color);
+    display: inline-flex;
+    font-weight: 500;
+    gap: 0.4rem;
+    text-decoration: none;
+  }
+
+  .projects .project-card-action:hover {
+    color: var(--global-hover-color);
+    text-decoration: none;
   }
 
   .repository-grid {
@@ -108,23 +123,23 @@
   }
 
   @media (max-width: 767.98px) {
-    .projects .row.row-cols-1 > .col {
-      flex-basis: 100%;
-      max-width: 100%;
-      width: 100%;
+    .projects .portfolio-project-column {
+      flex-basis: 100% !important;
+      max-width: 100% !important;
+      width: 100% !important;
     }
 
-    .projects .card {
+    .projects .portfolio-project-card {
       min-height: 0;
     }
 
-    .projects .card > .row.no-gutters > .col-md-6:first-child {
-      flex-basis: 10.5rem !important;
-      height: 10.5rem;
+    .projects .project-card-image-shell {
+      flex-basis: 11rem;
+      height: 11rem;
     }
 
-    .projects .card-title,
-    .projects .card-text {
+    .projects .portfolio-project-card .card-title,
+    .projects .portfolio-project-card .card-text {
       min-height: 0;
     }
 
@@ -132,7 +147,7 @@
       grid-template-columns: minmax(0, 1fr);
     }
   }
-</style> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/zh/"> <span class="font-weight-bold">Guanjie</span> Huang </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/zh/">首页</a> </li> <li class="nav-item "> <a class="nav-link" href="/zh/publications/">论文</a> </li> <li class="nav-item "> <a class="nav-link" href="/zh/projects/">项目</a> </li> <li class="nav-item active"> <a class="nav-link" href="/zh/repositories/">代码</a> </li> <li class="nav-item "> <a class="nav-link" href="/zh/cv/">简历</a> </li> <li class="nav-item language-switcher"><a class="nav-link" href="/repositories/" hreflang="en" title="Switch to English">English</a></li><li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="打开搜索"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="切换主题" aria-label="切换配色主题"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">代码仓库</h1> <p class="post-description">公开的研究实现、数据集与个人主页代码。</p> </header> <article> <h2 id="github-主页">GitHub 主页</h2> <div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center"> <div class="repo p-2 text-center"> <a href="https://github.com/DennisHgj" rel="external nofollow noopener" target="_blank"> <img class="only-light w-100" alt="DennisHgj" src="https://github-stats-extended.vercel.app/api/?username=DennisHgj&amp;theme=default&amp;locale=en&amp;show_icons=true" onerror="this.closest('.repo').style.display='none'"> <img class="only-dark w-100" alt="DennisHgj" src="https://github-stats-extended.vercel.app/api/?username=DennisHgj&amp;theme=dark&amp;locale=en&amp;show_icons=true" onerror="this.closest('.repo').style.display='none'"> </a> </div> </div> <h2 id="科研与多模态人工智能">科研与多模态人工智能</h2> <div class="repositories repository-grid"> <div class="repo p-2 text-center"> <a href="https://github.com/DennisHgj/Cued-Agent" rel="external nofollow noopener" target="_blank"> <img class="only-light w-100" alt="DennisHgj/Cued-Agent" src="https://github-stats-extended.vercel.app/api/pin/?username=DennisHgj&amp;repo=Cued-Agent&amp;theme=default&amp;locale=en&amp;show_owner=false&amp;description_lines_count=3" onerror="this.closest('.repo').style.display='none'"> <img class="only-dark w-100" alt="DennisHgj/Cued-Agent" src="https://github-stats-extended.vercel.app/api/pin/?username=DennisHgj&amp;repo=Cued-Agent&amp;theme=dark&amp;locale=en&amp;show_owner=false&amp;description_lines_count=3" onerror="this.closest('.repo').style.display='none'"> </a> </div> <div class="repo p-2 text-center"> <a href="https://github.com/DennisHgj/STF_ACSR" rel="external nofollow noopener" target="_blank"> <img class="only-light w-100" alt="DennisHgj/STF_ACSR" src="https://github-stats-extended.vercel.app/api/pin/?username=DennisHgj&amp;repo=STF_ACSR&amp;theme=default&amp;locale=en&amp;show_owner=false&amp;description_lines_count=3" onerror="this.closest('.repo').style.display='none'"> <img class="only-dark w-100" alt="DennisHgj/STF_ACSR" src="https://github-stats-extended.vercel.app/api/pin/?username=DennisHgj&amp;repo=STF_ACSR&amp;theme=dark&amp;locale=en&amp;show_owner=false&amp;description_lines_count=3" onerror="this.closest('.repo').style.display='none'"> </a> </div> <div class="repo p-2 text-center"> <a href="https://github.com/DennisHgj/SMP_FSAVC" rel="external nofollow noopener" target="_blank"> <img class="only-light w-100" alt="DennisHgj/SMP_FSAVC" src="https://github-stats-extended.vercel.app/api/pin/?username=DennisHgj&amp;repo=SMP_FSAVC&amp;theme=default&amp;locale=en&amp;show_owner=false&amp;description_lines_count=3" onerror="this.closest('.repo').style.display='none'"> <img class="only-dark w-100" alt="DennisHgj/SMP_FSAVC" src="https://github-stats-extended.vercel.app/api/pin/?username=DennisHgj&amp;repo=SMP_FSAVC&amp;theme=dark&amp;locale=en&amp;show_owner=false&amp;description_lines_count=3" onerror="this.closest('.repo').style.display='none'"> </a> </div> <div class="repo p-2 text-center"> <a href="https://github.com/imxtx/PhyAVBench" rel="external nofollow noopener" target="_blank"> <img class="only-light w-100" alt="imxtx/PhyAVBench" src="https://github-stats-extended.vercel.app/api/pin/?username=imxtx&amp;repo=PhyAVBench&amp;theme=default&amp;locale=en&amp;show_owner=true&amp;description_lines_count=3" onerror="this.closest('.repo').style.display='none'"> <img class="only-dark w-100" alt="imxtx/PhyAVBench" src="https://github-stats-extended.vercel.app/api/pin/?username=imxtx&amp;repo=PhyAVBench&amp;theme=dark&amp;locale=en&amp;show_owner=true&amp;description_lines_count=3" onerror="this.closest('.repo').style.display='none'"> </a> </div> <div class="repo p-2 text-center"> <a href="https://github.com/983632847/WebUAV-3M" rel="external nofollow noopener" target="_blank"> <img class="only-light w-100" alt="983632847/WebUAV-3M" src="https://github-stats-extended.vercel.app/api/pin/?username=983632847&amp;repo=WebUAV-3M&amp;theme=default&amp;locale=en&amp;show_owner=true&amp;description_lines_count=3" onerror="this.closest('.repo').style.display='none'"> <img class="only-dark w-100" alt="983632847/WebUAV-3M" src="https://github-stats-extended.vercel.app/api/pin/?username=983632847&amp;repo=WebUAV-3M&amp;theme=dark&amp;locale=en&amp;show_owner=true&amp;description_lines_count=3" onerror="this.closest('.repo').style.display='none'"> </a> </div> <div class="repo p-2 text-center"> <a href="https://github.com/983632847/Awesome-Multimodal-Object-Tracking" rel="external nofollow noopener" target="_blank"> <img class="only-light w-100" alt="983632847/Awesome-Multimodal-Object-Tracking" src="https://github-stats-extended.vercel.app/api/pin/?username=983632847&amp;repo=Awesome-Multimodal-Object-Tracking&amp;theme=default&amp;locale=en&amp;show_owner=true&amp;description_lines_count=3" onerror="this.closest('.repo').style.display='none'"> <img class="only-dark w-100" alt="983632847/Awesome-Multimodal-Object-Tracking" src="https://github-stats-extended.vercel.app/api/pin/?username=983632847&amp;repo=Awesome-Multimodal-Object-Tracking&amp;theme=dark&amp;locale=en&amp;show_owner=true&amp;description_lines_count=3" onerror="this.closest('.repo').style.display='none'"> </a> </div> </div> <h2 id="科研软件与早期项目">科研软件与早期项目</h2> <div class="repositories repository-grid"> <div class="repo p-2 text-center"> <a href="https://github.com/DennisHgj/lithology-viewer" rel="external nofollow noopener" target="_blank"> <img class="only-light w-100" alt="DennisHgj/lithology-viewer" src="https://github-stats-extended.vercel.app/api/pin/?username=DennisHgj&amp;repo=lithology-viewer&amp;theme=default&amp;locale=en&amp;show_owner=false&amp;description_lines_count=3" onerror="this.closest('.repo').style.display='none'"> <img class="only-dark w-100" alt="DennisHgj/lithology-viewer" src="https://github-stats-extended.vercel.app/api/pin/?username=DennisHgj&amp;repo=lithology-viewer&amp;theme=dark&amp;locale=en&amp;show_owner=false&amp;description_lines_count=3" onerror="this.closest('.repo').style.display='none'"> </a> </div> <div class="repo p-2 text-center"> <a href="https://github.com/DennisHgj/pyela" rel="external nofollow noopener" target="_blank"> <img class="only-light w-100" alt="DennisHgj/pyela" src="https://github-stats-extended.vercel.app/api/pin/?username=DennisHgj&amp;repo=pyela&amp;theme=default&amp;locale=en&amp;show_owner=false&amp;description_lines_count=3" onerror="this.closest('.repo').style.display='none'"> <img class="only-dark w-100" alt="DennisHgj/pyela" src="https://github-stats-extended.vercel.app/api/pin/?username=DennisHgj&amp;repo=pyela&amp;theme=dark&amp;locale=en&amp;show_owner=false&amp;description_lines_count=3" onerror="this.closest('.repo').style.display='none'"> </a> </div> <div class="repo p-2 text-center"> <a href="https://github.com/DennisHgj/pyela-doc" rel="external nofollow noopener" target="_blank"> <img class="only-light w-100" alt="DennisHgj/pyela-doc" src="https://github-stats-extended.vercel.app/api/pin/?username=DennisHgj&amp;repo=pyela-doc&amp;theme=default&amp;locale=en&amp;show_owner=false&amp;description_lines_count=3" onerror="this.closest('.repo').style.display='none'"> <img class="only-dark w-100" alt="DennisHgj/pyela-doc" src="https://github-stats-extended.vercel.app/api/pin/?username=DennisHgj&amp;repo=pyela-doc&amp;theme=dark&amp;locale=en&amp;show_owner=false&amp;description_lines_count=3" onerror="this.closest('.repo').style.display='none'"> </a> </div> <div class="repo p-2 text-center"> <a href="https://github.com/DennisHgj/litho-aem-blending-eda" rel="external nofollow noopener" target="_blank"> <img class="only-light w-100" alt="DennisHgj/litho-aem-blending-eda" src="https://github-stats-extended.vercel.app/api/pin/?username=DennisHgj&amp;repo=litho-aem-blending-eda&amp;theme=default&amp;locale=en&amp;show_owner=false&amp;description_lines_count=3" onerror="this.closest('.repo').style.display='none'"> <img class="only-dark w-100" alt="DennisHgj/litho-aem-blending-eda" src="https://github-stats-extended.vercel.app/api/pin/?username=DennisHgj&amp;repo=litho-aem-blending-eda&amp;theme=dark&amp;locale=en&amp;show_owner=false&amp;description_lines_count=3" onerror="this.closest('.repo').style.display='none'"> </a> </div> <div class="repo p-2 text-center"> <a href="https://github.com/DennisHgj/3D-Lithology-Visualize-Sample" rel="external nofollow noopener" target="_blank"> <img class="only-light w-100" alt="DennisHgj/3D-Lithology-Visualize-Sample" src="https://github-stats-extended.vercel.app/api/pin/?username=DennisHgj&amp;repo=3D-Lithology-Visualize-Sample&amp;theme=default&amp;locale=en&amp;show_owner=false&amp;description_lines_count=3" onerror="this.closest('.repo').style.display='none'"> <img class="only-dark w-100" alt="DennisHgj/3D-Lithology-Visualize-Sample" src="https://github-stats-extended.vercel.app/api/pin/?username=DennisHgj&amp;repo=3D-Lithology-Visualize-Sample&amp;theme=dark&amp;locale=en&amp;show_owner=false&amp;description_lines_count=3" onerror="this.closest('.repo').style.display='none'"> </a> </div> <div class="repo p-2 text-center"> <a href="https://github.com/DennisHgj/UnifiedStyleTransfer" rel="external nofollow noopener" target="_blank"> <img class="only-light w-100" alt="DennisHgj/UnifiedStyleTransfer" src="https://github-stats-extended.vercel.app/api/pin/?username=DennisHgj&amp;repo=UnifiedStyleTransfer&amp;theme=default&amp;locale=en&amp;show_owner=false&amp;description_lines_count=3" onerror="this.closest('.repo').style.display='none'"> <img class="only-dark w-100" alt="DennisHgj/UnifiedStyleTransfer" src="https://github-stats-extended.vercel.app/api/pin/?username=DennisHgj&amp;repo=UnifiedStyleTransfer&amp;theme=dark&amp;locale=en&amp;show_owner=false&amp;description_lines_count=3" onerror="this.closest('.repo').style.display='none'"> </a> </div> <div class="repo p-2 text-center"> <a href="https://github.com/DennisHgj/behance_release" rel="external nofollow noopener" target="_blank"> <img class="only-light w-100" alt="DennisHgj/behance_release" src="https://github-stats-extended.vercel.app/api/pin/?username=DennisHgj&amp;repo=behance_release&amp;theme=default&amp;locale=en&amp;show_owner=false&amp;description_lines_count=3" onerror="this.closest('.repo').style.display='none'"> <img class="only-dark w-100" alt="DennisHgj/behance_release" src="https://github-stats-extended.vercel.app/api/pin/?username=DennisHgj&amp;repo=behance_release&amp;theme=dark&amp;locale=en&amp;show_owner=false&amp;description_lines_count=3" onerror="this.closest('.repo').style.display='none'"> </a> </div> <div class="repo p-2 text-center"> <a href="https://github.com/DennisHgj/wikiart" rel="external nofollow noopener" target="_blank"> <img class="only-light w-100" alt="DennisHgj/wikiart" src="https://github-stats-extended.vercel.app/api/pin/?username=DennisHgj&amp;repo=wikiart&amp;theme=default&amp;locale=en&amp;show_owner=false&amp;description_lines_count=3" onerror="this.closest('.repo').style.display='none'"> <img class="only-dark w-100" alt="DennisHgj/wikiart" src="https://github-stats-extended.vercel.app/api/pin/?username=DennisHgj&amp;repo=wikiart&amp;theme=dark&amp;locale=en&amp;show_owner=false&amp;description_lines_count=3" onerror="this.closest('.repo').style.display='none'"> </a> </div> <div class="repo p-2 text-center"> <a href="https://github.com/DennisHgj/DennisHgj.github.io" rel="external nofollow noopener" target="_blank"> <img class="only-light w-100" alt="DennisHgj/DennisHgj.github.io" src="https://github-stats-extended.vercel.app/api/pin/?username=DennisHgj&amp;repo=DennisHgj.github.io&amp;theme=default&amp;locale=en&amp;show_owner=false&amp;description_lines_count=3" onerror="this.closest('.repo').style.display='none'"> <img class="only-dark w-100" alt="DennisHgj/DennisHgj.github.io" src="https://github-stats-extended.vercel.app/api/pin/?username=DennisHgj&amp;repo=DennisHgj.github.io&amp;theme=dark&amp;locale=en&amp;show_owner=false&amp;description_lines_count=3" onerror="this.closest('.repo').style.display='none'"> </a> </div> </div> <p>以上优先展示科研代码及较完整的公开项目。<a href="https://github.com/DennisHgj?tab=repositories" rel="external nofollow noopener" target="_blank">查看 GitHub 上的全部公开仓库</a>。</p> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Guanjie Huang. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. </div> </footer> <script>
+</style> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/zh/"> <span class="font-weight-bold">Guanjie</span> Huang </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/zh/">首页</a> </li> <li class="nav-item "> <a class="nav-link" href="/zh/publications/">论文</a> </li> <li class="nav-item "> <a class="nav-link" href="/zh/projects/">项目</a> </li> <li class="nav-item active"> <a class="nav-link" href="/zh/repositories/">代码</a> </li> <li class="nav-item "> <a class="nav-link" href="/zh/cv/">简历</a> </li> <li class="nav-item language-switcher"><a class="nav-link" href="/repositories/" hreflang="en" title="Switch to English">English</a></li><li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="打开搜索"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="切换主题" aria-label="切换配色主题"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">代码仓库</h1> <p class="post-description">公开的研究实现、数据集与个人主页代码。</p> </header> <article> <h2 id="github-主页">GitHub 主页</h2> <div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center"> <div class="repo p-2 text-center"> <a href="https://github.com/DennisHgj" rel="external nofollow noopener" target="_blank"> <img class="only-light w-100" alt="DennisHgj" src="https://github-stats-extended.vercel.app/api/?username=DennisHgj&amp;theme=default&amp;locale=en&amp;show_icons=true" onerror="this.closest('.repo').style.display='none'"> <img class="only-dark w-100" alt="DennisHgj" src="https://github-stats-extended.vercel.app/api/?username=DennisHgj&amp;theme=dark&amp;locale=en&amp;show_icons=true" onerror="this.closest('.repo').style.display='none'"> </a> </div> </div> <h2 id="精选代码仓库">精选代码仓库</h2> <div class="repositories repository-grid"> <div class="repo p-2 text-center"> <a href="https://github.com/DennisHgj/Cued-Agent" rel="external nofollow noopener" target="_blank"> <img class="only-light w-100" alt="DennisHgj/Cued-Agent" src="https://github-stats-extended.vercel.app/api/pin/?username=DennisHgj&amp;repo=Cued-Agent&amp;theme=default&amp;locale=en&amp;show_owner=false&amp;description_lines_count=3" onerror="this.closest('.repo').style.display='none'"> <img class="only-dark w-100" alt="DennisHgj/Cued-Agent" src="https://github-stats-extended.vercel.app/api/pin/?username=DennisHgj&amp;repo=Cued-Agent&amp;theme=dark&amp;locale=en&amp;show_owner=false&amp;description_lines_count=3" onerror="this.closest('.repo').style.display='none'"> </a> </div> <div class="repo p-2 text-center"> <a href="https://github.com/DennisHgj/STF_ACSR" rel="external nofollow noopener" target="_blank"> <img class="only-light w-100" alt="DennisHgj/STF_ACSR" src="https://github-stats-extended.vercel.app/api/pin/?username=DennisHgj&amp;repo=STF_ACSR&amp;theme=default&amp;locale=en&amp;show_owner=false&amp;description_lines_count=3" onerror="this.closest('.repo').style.display='none'"> <img class="only-dark w-100" alt="DennisHgj/STF_ACSR" src="https://github-stats-extended.vercel.app/api/pin/?username=DennisHgj&amp;repo=STF_ACSR&amp;theme=dark&amp;locale=en&amp;show_owner=false&amp;description_lines_count=3" onerror="this.closest('.repo').style.display='none'"> </a> </div> <div class="repo p-2 text-center"> <a href="https://github.com/DennisHgj/SMP_FSAVC" rel="external nofollow noopener" target="_blank"> <img class="only-light w-100" alt="DennisHgj/SMP_FSAVC" src="https://github-stats-extended.vercel.app/api/pin/?username=DennisHgj&amp;repo=SMP_FSAVC&amp;theme=default&amp;locale=en&amp;show_owner=false&amp;description_lines_count=3" onerror="this.closest('.repo').style.display='none'"> <img class="only-dark w-100" alt="DennisHgj/SMP_FSAVC" src="https://github-stats-extended.vercel.app/api/pin/?username=DennisHgj&amp;repo=SMP_FSAVC&amp;theme=dark&amp;locale=en&amp;show_owner=false&amp;description_lines_count=3" onerror="this.closest('.repo').style.display='none'"> </a> </div> <div class="repo p-2 text-center"> <a href="https://github.com/imxtx/PhyAVBench" rel="external nofollow noopener" target="_blank"> <img class="only-light w-100" alt="imxtx/PhyAVBench" src="https://github-stats-extended.vercel.app/api/pin/?username=imxtx&amp;repo=PhyAVBench&amp;theme=default&amp;locale=en&amp;show_owner=true&amp;description_lines_count=3" onerror="this.closest('.repo').style.display='none'"> <img class="only-dark w-100" alt="imxtx/PhyAVBench" src="https://github-stats-extended.vercel.app/api/pin/?username=imxtx&amp;repo=PhyAVBench&amp;theme=dark&amp;locale=en&amp;show_owner=true&amp;description_lines_count=3" onerror="this.closest('.repo').style.display='none'"> </a> </div> <div class="repo p-2 text-center"> <a href="https://github.com/983632847/WebUAV-3M" rel="external nofollow noopener" target="_blank"> <img class="only-light w-100" alt="983632847/WebUAV-3M" src="https://github-stats-extended.vercel.app/api/pin/?username=983632847&amp;repo=WebUAV-3M&amp;theme=default&amp;locale=en&amp;show_owner=true&amp;description_lines_count=3" onerror="this.closest('.repo').style.display='none'"> <img class="only-dark w-100" alt="983632847/WebUAV-3M" src="https://github-stats-extended.vercel.app/api/pin/?username=983632847&amp;repo=WebUAV-3M&amp;theme=dark&amp;locale=en&amp;show_owner=true&amp;description_lines_count=3" onerror="this.closest('.repo').style.display='none'"> </a> </div> <div class="repo p-2 text-center"> <a href="https://github.com/983632847/Awesome-Multimodal-Object-Tracking" rel="external nofollow noopener" target="_blank"> <img class="only-light w-100" alt="983632847/Awesome-Multimodal-Object-Tracking" src="https://github-stats-extended.vercel.app/api/pin/?username=983632847&amp;repo=Awesome-Multimodal-Object-Tracking&amp;theme=default&amp;locale=en&amp;show_owner=true&amp;description_lines_count=3" onerror="this.closest('.repo').style.display='none'"> <img class="only-dark w-100" alt="983632847/Awesome-Multimodal-Object-Tracking" src="https://github-stats-extended.vercel.app/api/pin/?username=983632847&amp;repo=Awesome-Multimodal-Object-Tracking&amp;theme=dark&amp;locale=en&amp;show_owner=true&amp;description_lines_count=3" onerror="this.closest('.repo').style.display='none'"> </a> </div> <div class="repo p-2 text-center"> <a href="https://github.com/DennisHgj/DennisHgj.github.io" rel="external nofollow noopener" target="_blank"> <img class="only-light w-100" alt="DennisHgj/DennisHgj.github.io" src="https://github-stats-extended.vercel.app/api/pin/?username=DennisHgj&amp;repo=DennisHgj.github.io&amp;theme=default&amp;locale=en&amp;show_owner=false&amp;description_lines_count=3" onerror="this.closest('.repo').style.display='none'"> <img class="only-dark w-100" alt="DennisHgj/DennisHgj.github.io" src="https://github-stats-extended.vercel.app/api/pin/?username=DennisHgj&amp;repo=DennisHgj.github.io&amp;theme=dark&amp;locale=en&amp;show_owner=false&amp;description_lines_count=3" onerror="this.closest('.repo').style.display='none'"> </a> </div> </div> <p>这里只展示论文已有代码和本站之前提到的项目。<a href="https://github.com/DennisHgj?tab=repositories" rel="external nofollow noopener" target="_blank">查看 GitHub 上的全部公开仓库</a>。</p> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Guanjie Huang. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. </div> </footer> <script>
   window.alFolio = {
     compatBootstrap: false
   };
