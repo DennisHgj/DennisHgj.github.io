@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: DennisHgj.github.io/sitemap.xml
+Sitemap: https://DennisHgj.github.io/sitemap.xml
