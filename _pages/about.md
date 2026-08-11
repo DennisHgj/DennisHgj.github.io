@@ -26,6 +26,14 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
+<div class="opportunity-banner" role="note" aria-label="Employment availability">
+  <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+  <div>
+    <strong>Open to full-time opportunities</strong>
+    <span>Multimodal AI research and applied research roles</span>
+  </div>
+</div>
+
 I am a Ph.D. candidate in Artificial Intelligence at **The Hong Kong University of Science and Technology (Guangzhou)**, advised by **Prof. Li Liu** and **Prof. Danny H. K. Tsang**. My research focuses on efficient and reliable multimodal intelligence, especially audio-visual understanding, cued speech recognition, multimodal large language models, and uncertainty estimation.
 
 My recent work studies how language models and specialized agents can reason over visual speech and hand cues, how multimodal systems can learn from limited data, and how their confidence and authenticity can be assessed. I am also interested in audio deepfake detection and physically grounded evaluation of audio-visual generation.
@@ -33,7 +41,5 @@ My recent work studies how language models and specialized agents can reason ove
 Before my doctoral study, I worked on industrial computer vision, large-scale multimodal dataset construction, UAV tracking, and learning-assisted optimization. I received an M.A.I. from the Australian National University and a B.Eng. in Software Engineering from the University of Electronic Science and Technology of China.
 
 **Research interests:** audio-visual learning · multimodal large language models and agents · speech and cued speech recognition · trustworthy multimodal AI · model uncertainty · audio deepfake detection
-
-**I am currently seeking full-time opportunities** in multimodal AI research and applied research.
 
 I welcome conversations about research collaboration and multimodal AI opportunities.

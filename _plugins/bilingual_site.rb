@@ -21,7 +21,7 @@ module BilingualSite
   }.freeze
 
   UI_TRANSLATIONS = {
-    'Oral presentation.' => '口头报告。',
+    'Oral presentation' => '口头报告',
     'Co-first author.' => '共同第一作者。',
     'Student Travel Award' => '学生差旅奖',
     'Outstanding Paper' => '杰出论文',

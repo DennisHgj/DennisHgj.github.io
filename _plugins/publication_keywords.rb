@@ -20,6 +20,12 @@ PUBLICATION_KEYWORD_STYLE = <<~HTML.freeze
       line-height: 1.35;
       padding: 0.12rem 0.55rem;
     }
+
+    .publication-note {
+      display: inline-block;
+      margin-left: 0.5rem;
+      white-space: nowrap;
+    }
   </style>
 HTML
 
@@ -34,6 +40,8 @@ module PublicationKeywords
 
   def inject(output, data, language)
     inserted = false
+
+    output.gsub!(%r{(<span class="publication-note">[^<]*</span>)\s+,}, '\1,')
 
     data.each do |bibkey, translations|
       keywords = translations[language]
