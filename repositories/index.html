@@ -7,6 +7,9 @@
   </script> <link rel="stylesheet" href="/assets/al_email_protect/css/email-protect.css"> <link rel="alternate" hreflang="en" href="https://DennisHgj.github.io/repositories/"> <link rel="alternate" hreflang="zh-CN" href="https://DennisHgj.github.io/zh/repositories/"> <link rel="alternate" hreflang="x-default" href="https://DennisHgj.github.io/repositories/"> <style id="portfolio-layout-style">
   .projects .row.row-cols-1 > .col {
     display: flex;
+    flex: 0 0 50%;
+    max-width: 50%;
+    width: 50%;
   }
 
   .projects .row.row-cols-1 > .col > a {
@@ -105,6 +108,12 @@
   }
 
   @media (max-width: 767.98px) {
+    .projects .row.row-cols-1 > .col {
+      flex-basis: 100%;
+      max-width: 100%;
+      width: 100%;
+    }
+
     .projects .card {
       min-height: 0;
     }
