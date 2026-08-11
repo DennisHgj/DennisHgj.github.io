@@ -1,97 +1,286 @@
-- title: General Information
-  type: map
-  contents:
-    - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
-    - name: Languages
-      value: English, German
+cv:
+  name: Guanjie Huang
+  label: Ph.D. Candidate in Artificial Intelligence
+  email: ghuang565@connect.hkust-gz.edu.cn
+  location: Guangzhou, China
+  image: ""
+  summary: Ph.D. candidate at HKUST(GZ) researching efficient and reliable multimodal intelligence, with a focus on audio-visual learning, cued speech recognition, multimodal large language models and agents, uncertainty estimation, and audio deepfake detection.
 
-- title: Education
-  type: time_table
-  contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
-      description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
-      description:
-        - Description 1.
-        - Description 2.
+  social_networks:
+    - network: GitHub
+      username: DennisHgj
 
-- title: Experience
-  type: time_table
-  contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
-      description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
-      description:
-        - Description 1.
-        - Description 2.
+  sections:
+    Education:
+      - institution: The Hong Kong University of Science and Technology (Guangzhou)
+        location: Guangzhou, China
+        url: https://www.hkust-gz.edu.cn/
+        area: Artificial Intelligence
+        studyType: Ph.D.
+        start_date: 2023-09
+        end_date: present
+        highlights:
+          - Advised by Prof. Li Liu and Prof. Danny H. K. Tsang.
+          - Research on efficient audio-visual learning, cued speech recognition, audio-visual forgery detection, and language-model uncertainty.
 
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
+      - institution: Australian National University
+        location: Canberra, Australia
+        url: https://www.anu.edu.au/
+        area: Artificial Intelligence
+        studyType: Master
+        start_date: 2018-07
+        end_date: 2020-12
 
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
-      description:
+      - institution: University of Electronic Science and Technology of China
+        location: Chengdu, China
+        url: https://en.uestc.edu.cn/
+        area: Software Engineering
+        studyType: Bachelor of Engineering
+        start_date: 2014-09
+        end_date: 2018-06
+        highlights:
+          - Outstanding Graduate.
 
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
+    Experience:
+      - company: The Hong Kong University of Science and Technology (Guangzhou)
+        position: Doctoral Researcher
+        location: Guangzhou, China
+        start_date: 2023-05
+        end_date: present
+        summary: Research on audio-visual intelligence, multimodal large language models, model reliability, and assistive speech technologies.
+        highlights:
+          - Developed few-shot audio-visual learning methods using semantic prompts, adapters, latent attention, and prototype regularization.
+          - Built training-free and semi-training-free cued speech recognition systems with multimodal agents and MLLM-driven hand modeling.
+          - Studied audio deepfake detection, physically grounded audio-visual generation benchmarks, and evidential uncertainty for in-context learning.
+          - Contributed to multimodal assessment systems for people with hearing impairment using speech, video, text, and fNIRS signals.
 
-- title: Open Source Projects
-  type: time_table
-  contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+      - company: Suzhou INSNEX Intelligent Technology Co., Ltd.
+        position: Deep Learning Algorithm Engineer
+        location: Suzhou, China
+        start_date: 2022-05
+        end_date: 2023-05
+        summary: Developed industrial visual inspection algorithms for defect synthesis and detection.
+        highlights:
+          - Designed GAN-based defect generation methods for data augmentation and industrial inspection; the work contributed to a patent.
+          - Built generation, detection, and multi-task training pipelines for low-data defect scenarios.
 
-- title: Honors and Awards
-  type: time_table
-  contents:
-    - year: 1921
-      items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
-      items:
-        - Max Planck Medal
+      - company: Shenzhen Research Institute of Big Data
+        position: Algorithm Engineer
+        location: Shenzhen, China
+        start_date: 2021-04
+        end_date: 2022-05
+        summary: Worked on large-scale multimodal UAV tracking datasets and learning-assisted optimization.
+        highlights:
+          - Co-developed WebUAV-3M, containing 3.3 million frames from 4,500 videos across 223 categories, together with semi-automatic annotation tools and language/audio modalities.
+          - Explored deep-learning acceleration for mixed-integer linear programming and developed Python evaluation, testing, and visualization tools.
 
-- title: Academic Interests
-  type: nested_list
-  contents:
-    - title: Topic 1.
-      items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
-      items:
-        - Description 1.
-        - Description 2.
+      - company: Australian National University
+        position: Master's Researcher
+        location: Canberra, Australia
+        start_date: 2020-03
+        end_date: 2020-12
+        summary: Researched unified image style transfer methods.
 
-- title: Other Interests
-  type: list
-  contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+      - company: CSIRO
+        position: Research Assistant
+        location: Canberra, Australia
+        start_date: 2019-07
+        end_date: 2019-11
+        summary: Developed interactive 3D geological visualization tools with PyVista and reproducible Binder environments.
+
+    Selected Projects:
+      - name: Cued-Agent
+        summary: A training-free multi-agent framework for cued speech recognition that coordinates visual perception, hand-cue fusion, and LLM-based phoneme-to-word correction.
+        highlights:
+          - ACM Multimedia 2025 Oral; Student Travel Award.
+          - Released code and a Mandarin cued speech dataset for speakers with hearing impairment.
+        start_date: 2024
+        end_date: 2025
+
+      - name: STF-ACSR
+        summary: Semi training-free cued speech recognition using MLLM-driven hand-keyframe modeling and lightweight multimodal fusion.
+        highlights:
+          - Accepted at ICASSP 2026.
+          - Public implementation released on GitHub.
+        start_date: 2025
+        end_date: 2026
+
+      - name: Semantic Modulated Prompting
+        summary: A parameter-efficient few-shot audio-visual classification method combining semantic adapters, prompt latent attention, and prompted prototype regularization.
+        highlights:
+          - Published in IEEE/ACM Transactions on Audio, Speech, and Language Processing, 2026.
+        start_date: 2024
+        end_date: 2026
+
+      - name: PhyAVBench
+        summary: A controlled benchmark for evaluating whether audio-visual generation models obey physical interactions and cross-modal consistency.
+        highlights:
+          - Core contributor; ACM Multimedia 2026 Oral.
+          - Includes 1,000 paired prompts with more than 20 generated videos per group.
+        start_date: 2025
+        end_date: 2026
+
+      - name: Evidential Uncertainty for In-Context Learning
+        summary: Query-level evidential uncertainty methods for language-model in-context learning, evaluated across five datasets and multiple LLaMA and Qwen models.
+        highlights:
+          - Reduced average token usage by 96.7% in the evaluated setting.
+        start_date: 2025
+        end_date: present
+
+    Publications:
+      - title: Semantic Modulated Prompting for Few-Shot Audio-Visual Classification
+        authors:
+          - Guanjie Huang
+          - Yawen Cui
+          - Danny Hin Kwok Tsang
+          - Wenwu Wang
+          - Li Liu
+        publisher: IEEE/ACM Transactions on Audio, Speech, and Language Processing
+        releaseDate: 2026
+        url: https://doi.org/10.1109/TASLPRO.2026.3654246
+
+      - title: "Lend a Hand: Semi Training-Free Cued Speech Recognition via MLLM-Driven Hand Modeling"
+        authors:
+          - Guanjie Huang
+          - Danny H. K. Tsang
+          - Xiao-Ping Zhang
+          - Li Liu
+        publisher: IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)
+        releaseDate: 2026
+        url: https://arxiv.org/abs/2503.21785
+
+      - title: "Cued-Agent: A Multi-Agent Framework for Automatic Cued Speech Recognition"
+        authors:
+          - Guanjie Huang
+          - Danny H. K. Tsang
+          - Shan Yang
+          - Guangzhi Lei
+          - Li Liu
+        publisher: ACM International Conference on Multimedia
+        releaseDate: 2025
+        url: https://arxiv.org/abs/2508.00391
+
+      - title: "PhyAVBench: A Physical-Centric Audio-Visual Benchmark for Video Generation"
+        authors:
+          - Tianxin Xie
+          - Wentao Lei
+          - Guanjie Huang
+          - et al.
+        publisher: ACM International Conference on Multimedia
+        releaseDate: 2026
+        url: https://arxiv.org/abs/2512.23994
+
+      - title: "WebUAV-3M: A Benchmark Unveiling the Power of Million-Scale Deep UAV Tracking"
+        authors:
+          - Chunhui Zhang
+          - Guanjie Huang
+          - Li Liu
+          - Shan Huang
+          - Yinan Yang
+          - Xiang Wan
+          - Shiming Ge
+          - Dacheng Tao
+        publisher: IEEE Transactions on Pattern Analysis and Machine Intelligence
+        releaseDate: 2023
+        url: https://arxiv.org/abs/2201.07425
+
+      - title: "WebUOT-1M: Advancing Deep Underwater Object Tracking with a Million-Scale Benchmark"
+        authors:
+          - Chunhui Zhang
+          - Li Liu
+          - Guanjie Huang
+          - Hao Wen
+          - Xi Zhou
+          - Yanfeng Wang
+        publisher: Advances in Neural Information Processing Systems
+        releaseDate: 2024
+        url: https://arxiv.org/abs/2405.19818
+
+      - title: Underwater Camouflaged Object Tracking Meets Vision-Language SAM2
+        authors:
+          - Chunhui Zhang
+          - Li Liu
+          - Guanjie Huang
+          - Zhipeng Zhang
+          - Hao Wen
+          - Xi Zhou
+          - Shiming Ge
+          - Yanfeng Wang
+        publisher: CVPR Workshops
+        releaseDate: 2025
+        url: https://arxiv.org/abs/2409.16902
+
+      - title: Content-Aware Efficient Learner for Audio-Visual Emotion Recognition
+        authors:
+          - Guanjie Huang
+          - Weilin Lin
+          - Li Liu
+        publisher: International Conference on Social Robotics
+        releaseDate: 2024
+        url: https://link.springer.com/book/10.1007/978-981-96-1151-5
+
+    Awards:
+      - title: 4th Place, Efficient Speech Deepfake Detection Challenge 2
+        authors:
+          - IEEE ICME
+        date: 2026
+        awarder: IEEE ICME
+
+      - title: Student Travel Award
+        authors:
+          - ACM Multimedia
+        date: 2025
+        awarder: ACM Multimedia
+
+      - title: Outstanding Paper Award, CV4Animals Workshop
+        authors:
+          - CVPR Workshops
+        date: 2025
+        awarder: CV4Animals
+
+      - title: Best Student Paper Nomination
+        authors:
+          - International Conference on Social Robotics
+        date: 2024
+        awarder: ICSR
+
+      - title: Outstanding Technology Academic Paper
+        authors:
+          - Shenzhen
+        date: 2023
+        awarder: Shenzhen
+
+      - title: Outstanding Graduate
+        authors:
+          - University of Electronic Science and Technology of China
+        date: 2018
+        awarder: UESTC
+
+    Skills:
+      - name: Research
+        level: Advanced
+        icon: fa-solid fa-flask
+        keywords: "Audio-visual learning, multimodal representation and alignment, speech recognition, multimodal LLMs and agents, model uncertainty, audio forgery detection"
+
+      - name: Machine Learning
+        level: Advanced
+        icon: fa-solid fa-brain
+        keywords: "Transformers, adapters and parameter-efficient learning, self-supervised learning, attention and prototype methods, CNNs, U-Net, GANs, multi-task learning, evidential learning"
+
+      - name: Engineering
+        level: Advanced
+        icon: fa-solid fa-code
+        keywords: "Python, data and semi-automatic annotation pipelines, model training and evaluation, visualization, APIs, automated testing"
+
+    Languages:
+      - name: Chinese
+        summary: Native
+
+      - name: English
+        summary: Professional working proficiency
+
+    Certificates:
+      - name: ISTQB Certified Tester
+        date: 2017
+        issuer: International Software Testing Qualifications Board
+        icon: fa-solid fa-certificate

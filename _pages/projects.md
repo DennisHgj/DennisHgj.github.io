@@ -2,11 +2,11 @@
 layout: page
 title: projects
 permalink: /projects/
-description: A growing collection of your cool projects.
+description: Selected research projects in audio-visual intelligence, multimodal agents, model reliability, and large-scale datasets.
 nav: true
 nav_order: 3
-display_categories: [work, fun]
-horizontal: false
+display_categories: [research, benchmark, engineering]
+horizontal: true
 ---
 
 <!-- pages/projects.md -->
