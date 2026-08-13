@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+import json
 import os
 import re
 import sys
@@ -37,6 +38,50 @@ def load_scholar_user_id() -> str:
 
 SCHOLAR_USER_ID: str = load_scholar_user_id()
 OUTPUT_FILE: str = "_data/citations.yml"
+
+
+def fetch_serpapi_metrics(api_key: str) -> dict:
+    """Fetch profile metrics through SerpApi's Google Scholar Author API."""
+    query = urlencode(
+        {
+            "engine": "google_scholar_author",
+            "author_id": SCHOLAR_USER_ID,
+            "hl": "en",
+            "api_key": api_key,
+        }
+    )
+    request = Request(
+        f"https://serpapi.com/search.json?{query}",
+        headers={"Accept": "application/json", "User-Agent": "DennisHgj.github.io/1.0"},
+    )
+
+    try:
+        with urlopen(request, timeout=25) as response:
+            payload = json.load(response)
+    except (HTTPError, URLError, TimeoutError, json.JSONDecodeError) as error:
+        raise RuntimeError(f"SerpApi request failed: {error}") from error
+
+    if payload.get("error"):
+        raise RuntimeError(f"SerpApi returned an error: {payload['error']}")
+
+    return metrics_from_cited_by_table(payload.get("cited_by", {}).get("table", []))
+
+
+def metrics_from_cited_by_table(table: list) -> dict:
+    """Normalize SerpApi's cited-by table into the metrics stored by the site."""
+    metrics = {}
+    for row in table:
+        if "citations" in row:
+            metrics["total_citations"] = row["citations"].get("all")
+        elif "h_index" in row:
+            metrics["h_index"] = row["h_index"].get("all")
+        elif "i10_index" in row:
+            metrics["i10_index"] = row["i10_index"].get("all")
+
+    required_metrics = ("total_citations", "h_index", "i10_index")
+    if not all(isinstance(metrics.get(key), int) for key in required_metrics):
+        raise RuntimeError("SerpApi response did not contain complete Scholar profile metrics.")
+    return metrics
 
 
 def fetch_public_profile_metrics() -> dict:
@@ -102,12 +147,16 @@ def get_scholar_citations() -> None:
                 f"Warning: Could not read existing citation data from {OUTPUT_FILE}: {e}. The file may be missing or corrupted."
             )
 
+    serpapi_key = os.environ.get("SERPAPI_API_KEY", "").strip()
     try:
-        profile_metrics = fetch_public_profile_metrics()
+        if serpapi_key:
+            print("Using SerpApi Google Scholar Author API.")
+            profile_metrics = fetch_serpapi_metrics(serpapi_key)
+        else:
+            print("SERPAPI_API_KEY is not configured; trying the public Scholar profile directly.")
+            profile_metrics = fetch_public_profile_metrics()
     except Exception as e:
-        print(
-            f"Error fetching author data from Google Scholar for user ID '{SCHOLAR_USER_ID}': {e}. Please check your internet connection and Scholar user ID."
-        )
+        print(f"Error fetching Google Scholar metrics for user ID '{SCHOLAR_USER_ID}': {e}")
         sys.exit(1)
 
     citation_data = {

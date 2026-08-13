@@ -87,6 +87,8 @@ jobs:
       - name: Refresh Google Scholar profile stats
         id: scholar
         continue-on-error: true
+        env:
+          SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
         run: |
           pip3 install pyyaml
           timeout 35 python3 bin/update_scholar_citations.py
