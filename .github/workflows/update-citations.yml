@@ -1,11 +1,13 @@
 name: Update Google Scholar Citations
 
 on:
-  schedule:
-    - cron: "0 0 * * 1" # Monday
-    - cron: "0 0 * * 3" # Wednesday
-    - cron: "0 0 * * 5" # Friday
   workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  CONTENT_BRANCH: codex/al-folio-v1-migration
 
 jobs:
   update-citations:
@@ -14,9 +16,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      # See docs/CUSTOMIZE.md for details on how to set up PAT for triggering subsequent workflows
-      #        with:
-      #          token: ${{ secrets.PAT }}
+        with:
+          ref: ${{ env.CONTENT_BRANCH }}
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -97,5 +98,5 @@ jobs:
           git diff --staged --quiet || (
             echo "📤 Committing and pushing changes..."
             git commit -m "Update Google Scholar citations"
-            git push
+            git push origin HEAD:${CONTENT_BRANCH}
           )

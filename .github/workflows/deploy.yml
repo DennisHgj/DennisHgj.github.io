@@ -84,6 +84,11 @@ jobs:
           cache: "npm"
       - name: Install JS deps 📦
         run: npm ci
+      - name: Refresh Google Scholar profile stats
+        continue-on-error: true
+        run: |
+          pip3 install pyyaml scholarly
+          timeout 90 python3 bin/update_scholar_citations.py
       - name: Update _config.yml ⚙️
         uses: fjogeleit/yaml-update-action@main
         with:

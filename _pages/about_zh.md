@@ -31,6 +31,40 @@ latest_posts:
   </div>
 </div>
 
+{% assign scholar_stats = site.data.citations.metadata %}
+<div class="homepage-stats" aria-label="网站与学术指标">
+  <div class="homepage-stat-card homepage-stat-card--visits">
+    <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+    <div class="homepage-stat-content">
+      <span class="homepage-stat-label">主页访问量</span>
+      <img
+        class="homepage-stat-badge"
+        src="https://visitor-badge.laobi.icu/badge?page_id=DennisHgj.DennisHgj.github.io.home&amp;left_text=%E8%AE%BF%E9%97%AE&amp;left_color=%23595959&amp;right_color=%23b509ac&amp;format=true&amp;height=24"
+        alt="当前主页访问量"
+        height="24"
+      >
+      <small>自添加本计数器以来的页面加载次数</small>
+    </div>
+  </div>
+  <a
+    class="homepage-stat-card homepage-stat-card--scholar"
+    href="https://scholar.google.com/citations?user=cH80kpEAAAAJ&amp;hl=zh-CN"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="查看黄冠杰的 Google Scholar 主页"
+  >
+    <i class="ai ai-google-scholar" aria-hidden="true"></i>
+    <div class="homepage-stat-content">
+      <span class="homepage-stat-label">Google Scholar 引用量</span>
+      <strong class="homepage-stat-value">{{ scholar_stats.total_citations | default: "—" }}</strong>
+      <small>
+        {% if scholar_stats.last_updated %}更新于 {{ scholar_stats.last_updated }}{% else %}等待首次同步{% endif %}
+      </small>
+    </div>
+    <i class="fa-solid fa-arrow-up-right-from-square homepage-stat-link-icon" aria-hidden="true"></i>
+  </a>
+</div>
+
 我是香港科技大学（广州）人工智能方向博士研究生，导师为 **刘李教授（Prof. Li Liu）** 和 **曾宪国教授（Prof. Danny H. K. Tsang）**。我的研究聚焦高效、可靠的多模态智能，主要包括音视频理解、自动线索语识别、多模态大模型与智能体，以及模型不确定性。
 
 近期工作探索如何让大语言模型与专用智能体协同理解视觉语音和手势线索，如何在标注样本有限时高效学习多模态表示，以及如何评估模型的置信度与生成内容真实性。我也关注音频伪造检测和具有物理规律约束的音视频生成评测。
