@@ -85,10 +85,21 @@ jobs:
       - name: Install JS deps 📦
         run: npm ci
       - name: Refresh Google Scholar profile stats
+        id: scholar
         continue-on-error: true
         run: |
-          pip3 install pyyaml scholarly
-          timeout 90 python3 bin/update_scholar_citations.py
+          pip3 install pyyaml
+          timeout 35 python3 bin/update_scholar_citations.py
+      - name: Persist refreshed Scholar stats to the content branch
+        if: steps.scholar.outcome == 'success'
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add _data/citations.yml
+          git diff --staged --quiet || (
+            git commit -m "Update Google Scholar profile stats"
+            git push origin HEAD:codex/al-folio-v1-migration
+          )
       - name: Update _config.yml ⚙️
         uses: fjogeleit/yaml-update-action@main
         with:
