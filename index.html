@@ -64,6 +64,86 @@
     margin-top: 0.12rem;
   }
 
+  .homepage-stats {
+    display: grid;
+    gap: 0.8rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin: -0.25rem 0 1.35rem;
+  }
+
+  .homepage-stat-card {
+    align-items: center;
+    background: var(--global-card-bg-color);
+    border: 1px solid var(--global-divider-color);
+    border-radius: 0.55rem;
+    color: var(--global-text-color);
+    display: flex;
+    gap: 0.75rem;
+    min-height: 5.75rem;
+    padding: 0.85rem 0.95rem;
+    position: relative;
+    text-decoration: none;
+  }
+
+  a.homepage-stat-card:hover {
+    border-color: var(--global-theme-color);
+    color: var(--global-text-color);
+    text-decoration: none;
+    transform: translateY(-1px);
+  }
+
+  .homepage-stat-card > i:first-child {
+    color: var(--global-theme-color);
+    flex: 0 0 auto;
+    font-size: 1.35rem;
+    text-align: center;
+    width: 1.5rem;
+  }
+
+  .homepage-stat-content {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  .homepage-stat-label {
+    color: var(--global-text-color);
+    font-size: 0.88rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 0.28rem;
+  }
+
+  .homepage-stat-badge {
+    align-self: flex-start;
+    display: block;
+    height: 24px;
+    max-width: 100%;
+    width: auto;
+  }
+
+  .homepage-stat-value {
+    color: var(--global-theme-color);
+    font-size: 1.45rem;
+    line-height: 1.05;
+  }
+
+  .homepage-stat-card small {
+    color: var(--global-text-color-light);
+    font-size: 0.72rem;
+    line-height: 1.35;
+    margin-top: 0.3rem;
+  }
+
+  .homepage-stat-link-icon {
+    color: var(--global-text-color-light);
+    font-size: 0.65rem;
+    position: absolute;
+    right: 0.65rem;
+    top: 0.6rem;
+  }
+
   @media (max-width: 575.98px) {
     .profile .more-info {
       text-align: center;
@@ -71,6 +151,10 @@
 
     .opportunity-banner {
       align-items: flex-start;
+    }
+
+    .homepage-stats {
+      grid-template-columns: 1fr;
     }
   }
 </style> <style id="publication-keyword-style">
@@ -96,7 +180,7 @@
     margin-left: 0.5rem;
     white-space: nowrap;
   }
-</style> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item active"> <a class="nav-link" href="/">about <span class="sr-only">(current)</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/projects/">projects </a> </li> <li class="nav-item "> <a class="nav-link" href="/repositories/">repositories </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">CV </a> </li> <li class="nav-item language-switcher"><a class="nav-link" href="/zh/" hreflang="zh-CN" title="切换到中文">中文</a></li><li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title"> <span class="font-weight-bold">Guanjie</span> Huang </h1> <p class="desc">Ph.D. Candidate in Artificial Intelligence at <a href="https://www.hkust-gz.edu.cn/" rel="external nofollow noopener" target="_blank">HKUST(GZ)</a></p> </header> <article> <div class="profile float-right"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/prof_pic-480.webp 480w,/assets/img/prof_pic-800.webp 800w,/assets/img/prof_pic-1400.webp 1400w," type="image/webp" sizes="(min-width: 930px) 270.0px, (min-width: 576px) 30vw, 95vw"> <img src="/assets/img/prof_pic.jpg?v=cae366bb2bcb404c6e0b7cf928ccd8d6" class="img-fluid z-depth-1 rounded-circle" width="100%" height="auto" alt="prof_pic.jpg" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </source></picture> </figure> <div class="more-info"> <p>Guangzhou, China</p> <p><a href="mailto:ghuang565@connect.hkust-gz.edu.cn">ghuang565@connect.hkust-gz.edu.cn</a></p> </div> </div> <div class="clearfix"> <div class="opportunity-banner" role="note" aria-label="Employment availability"> <i class="fa-solid fa-briefcase" aria-hidden="true"></i> <div> <strong>Open to full-time opportunities</strong> <span>Multimodal AI research and applied research roles</span> </div> </div> <p>I am a Ph.D. candidate in Artificial Intelligence at <strong>The Hong Kong University of Science and Technology (Guangzhou)</strong>, advised by <strong>Prof. Li Liu</strong> and <strong>Prof. Danny H. K. Tsang</strong>. My research focuses on efficient and reliable multimodal intelligence, especially audio-visual understanding, cued speech recognition, multimodal large language models, and uncertainty estimation.</p> <p>My recent work studies how language models and specialized agents can reason over visual speech and hand cues, how multimodal systems can learn from limited data, and how their confidence and authenticity can be assessed. I am also interested in audio deepfake detection and physically grounded evaluation of audio-visual generation.</p> <p>Before my doctoral study, I worked on industrial computer vision, large-scale multimodal dataset construction, UAV tracking, and learning-assisted optimization. I received an M.A.I. from the Australian National University and a B.Eng. in Software Engineering from the University of Electronic Science and Technology of China.</p> <p><strong>Research interests:</strong> audio-visual learning · multimodal large language models and agents · speech and cued speech recognition · trustworthy multimodal AI · model uncertainty · audio deepfake detection</p> <p>I welcome conversations about research collaboration and multimodal AI opportunities.</p> </div> <h2> <a href="/news/" style="color: inherit">news</a> </h2> <div class="news"> <div class="table-responsive"> <table class="table table-sm table-borderless"> <tr> <th scope="row" style="width: 20%">May 06, 2026</th> <td> Presented <strong>STF-ACSR</strong>, our semi training-free cued speech recognition work, at ICASSP 2026. <a href="https://arxiv.org/abs/2503.21785" rel="external nofollow noopener" target="_blank">Paper</a> · <a href="https://github.com/DennisHgj/STF_ACSR" rel="external nofollow noopener" target="_blank">Code</a> </td> </tr> <tr> <th scope="row" style="width: 20%">Jan 14, 2026</th> <td> Our paper <strong>Semantic Modulated Prompting for Few-Shot Audio-Visual Classification</strong> was published in IEEE/ACM TASLP. <a href="https://doi.org/10.1109/TASLPRO.2026.3654246" rel="external nofollow noopener" target="_blank">Paper</a> </td> </tr> <tr> <th scope="row" style="width: 20%">Aug 01, 2025</th> <td> <strong>Cued-Agent</strong> was selected for an oral presentation at ACM Multimedia 2025, together with a Student Travel Award. <a href="https://arxiv.org/abs/2508.00391" rel="external nofollow noopener" target="_blank">Paper</a> · <a href="https://github.com/DennisHgj/Cued-Agent" rel="external nofollow noopener" target="_blank">Code</a> </td> </tr> </table> </div> </div> <h2> <a href="/publications/" style="color: inherit">selected publications</a> </h2> <div class="publications"> <ol class="bibliography"> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">TASLP</abbr> </div> <div id="huang2026smp" class="col-sm-8"> <div class="title">Semantic Modulated Prompting for Few-Shot Audio-Visual Classification</div> <div class="author"> <em>Guanjie Huang</em>, Yawen Cui, Danny Hin Kwok Tsang, and <span class="more-authors" title="click to view 2 more authors" onclick=" var element=this; element.setAttribute('title', ''); var more_authors_text=element.textContent == '2 more authors' ? 'Wenwu Wang, Li Liu' : '2 more authors'; var cursorPosition=0; var textAdder=setInterval(function(){ element.innerHTML = more_authors_text.substring(0, cursorPosition + 1); if (++cursorPosition == more_authors_text.length){ clearInterval(textAdder); } }, '10'); ">2 more authors</span> </div> <div class="periodical"> <em>IEEE/ACM Transactions on Audio, Speech, and Language Processing</em>, 2026 </div> <div class="periodical"> </div> <div class="pub-keywords" aria-label="Publication keywords"><span class="pub-keyword">Audio-Visual Learning</span><span class="pub-keyword">Few-Shot Learning</span><span class="pub-keyword">Prompt Tuning</span><span class="pub-keyword">Modality Rebalancing</span></div><div class="links"> <a href="https://doi.org/10.1109/TASLPRO.2026.3654246" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">DOI</a> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> <a href="https://doi.org/10.1109/TASLPRO.2026.3654246" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">HTML</a> <a href="https://github.com/DennisHgj/SMP_FSAVC" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Code</a> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">huang2026smp</span><span class="p">,</span>
+</style> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item active"> <a class="nav-link" href="/">about <span class="sr-only">(current)</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/projects/">projects </a> </li> <li class="nav-item "> <a class="nav-link" href="/repositories/">repositories </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">CV </a> </li> <li class="nav-item language-switcher"><a class="nav-link" href="/zh/" hreflang="zh-CN" title="切换到中文">中文</a></li><li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title"> <span class="font-weight-bold">Guanjie</span> Huang </h1> <p class="desc">Ph.D. Candidate in Artificial Intelligence at <a href="https://www.hkust-gz.edu.cn/" rel="external nofollow noopener" target="_blank">HKUST(GZ)</a></p> </header> <article> <div class="profile float-right"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/prof_pic-480.webp 480w,/assets/img/prof_pic-800.webp 800w,/assets/img/prof_pic-1400.webp 1400w," type="image/webp" sizes="(min-width: 930px) 270.0px, (min-width: 576px) 30vw, 95vw"> <img src="/assets/img/prof_pic.jpg?v=cae366bb2bcb404c6e0b7cf928ccd8d6" class="img-fluid z-depth-1 rounded-circle" width="100%" height="auto" alt="prof_pic.jpg" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </source></picture> </figure> <div class="more-info"> <p>Guangzhou, China</p> <p><a href="mailto:ghuang565@connect.hkust-gz.edu.cn">ghuang565@connect.hkust-gz.edu.cn</a></p> </div> </div> <div class="clearfix"> <div class="opportunity-banner" role="note" aria-label="Employment availability"> <i class="fa-solid fa-briefcase" aria-hidden="true"></i> <div> <strong>Open to full-time opportunities</strong> <span>Multimodal AI research and applied research roles</span> </div> </div> <div class="homepage-stats" aria-label="Website and research metrics"> <div class="homepage-stat-card homepage-stat-card--visits"> <i class="fa-solid fa-chart-line" aria-hidden="true"></i> <div class="homepage-stat-content"> <span class="homepage-stat-label">Homepage visits</span> <img class="homepage-stat-badge" src="https://visitor-badge.laobi.icu/badge?page_id=DennisHgj.DennisHgj.github.io.home&amp;left_text=Views&amp;left_color=%23595959&amp;right_color=%23b509ac&amp;format=true&amp;height=24" alt="Current homepage visit count" height="24"> <small>Page loads since this counter was added</small> </div> </div> <a class="homepage-stat-card homepage-stat-card--scholar" href="https://scholar.google.com/citations?user=cH80kpEAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer" aria-label="View Guanjie Huang's Google Scholar profile"> <i class="ai ai-google-scholar" aria-hidden="true"></i> <div class="homepage-stat-content"> <span class="homepage-stat-label">Google Scholar citations</span> <strong class="homepage-stat-value">—</strong> <small> Sync pending </small> </div> <i class="fa-solid fa-arrow-up-right-from-square homepage-stat-link-icon" aria-hidden="true"></i> </a> </div> <p>I am a Ph.D. candidate in Artificial Intelligence at <strong>The Hong Kong University of Science and Technology (Guangzhou)</strong>, advised by <strong>Prof. Li Liu</strong> and <strong>Prof. Danny H. K. Tsang</strong>. My research focuses on efficient and reliable multimodal intelligence, especially audio-visual understanding, cued speech recognition, multimodal large language models, and uncertainty estimation.</p> <p>My recent work studies how language models and specialized agents can reason over visual speech and hand cues, how multimodal systems can learn from limited data, and how their confidence and authenticity can be assessed. I am also interested in audio deepfake detection and physically grounded evaluation of audio-visual generation.</p> <p>Before my doctoral study, I worked on industrial computer vision, large-scale multimodal dataset construction, UAV tracking, and learning-assisted optimization. I received an M.A.I. from the Australian National University and a B.Eng. in Software Engineering from the University of Electronic Science and Technology of China.</p> <p><strong>Research interests:</strong> audio-visual learning · multimodal large language models and agents · speech and cued speech recognition · trustworthy multimodal AI · model uncertainty · audio deepfake detection</p> <p>I welcome conversations about research collaboration and multimodal AI opportunities.</p> </div> <h2> <a href="/news/" style="color: inherit">news</a> </h2> <div class="news"> <div class="table-responsive"> <table class="table table-sm table-borderless"> <tr> <th scope="row" style="width: 20%">May 06, 2026</th> <td> Presented <strong>STF-ACSR</strong>, our semi training-free cued speech recognition work, at ICASSP 2026. <a href="https://arxiv.org/abs/2503.21785" rel="external nofollow noopener" target="_blank">Paper</a> · <a href="https://github.com/DennisHgj/STF_ACSR" rel="external nofollow noopener" target="_blank">Code</a> </td> </tr> <tr> <th scope="row" style="width: 20%">Jan 14, 2026</th> <td> Our paper <strong>Semantic Modulated Prompting for Few-Shot Audio-Visual Classification</strong> was published in IEEE/ACM TASLP. <a href="https://doi.org/10.1109/TASLPRO.2026.3654246" rel="external nofollow noopener" target="_blank">Paper</a> </td> </tr> <tr> <th scope="row" style="width: 20%">Aug 01, 2025</th> <td> <strong>Cued-Agent</strong> was selected for an oral presentation at ACM Multimedia 2025, together with a Student Travel Award. <a href="https://arxiv.org/abs/2508.00391" rel="external nofollow noopener" target="_blank">Paper</a> · <a href="https://github.com/DennisHgj/Cued-Agent" rel="external nofollow noopener" target="_blank">Code</a> </td> </tr> </table> </div> </div> <h2> <a href="/publications/" style="color: inherit">selected publications</a> </h2> <div class="publications"> <ol class="bibliography"> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">TASLP</abbr> </div> <div id="huang2026smp" class="col-sm-8"> <div class="title">Semantic Modulated Prompting for Few-Shot Audio-Visual Classification</div> <div class="author"> <em>Guanjie Huang</em>, Yawen Cui, Danny Hin Kwok Tsang, and <span class="more-authors" title="click to view 2 more authors" onclick=" var element=this; element.setAttribute('title', ''); var more_authors_text=element.textContent == '2 more authors' ? 'Wenwu Wang, Li Liu' : '2 more authors'; var cursorPosition=0; var textAdder=setInterval(function(){ element.innerHTML = more_authors_text.substring(0, cursorPosition + 1); if (++cursorPosition == more_authors_text.length){ clearInterval(textAdder); } }, '10'); ">2 more authors</span> </div> <div class="periodical"> <em>IEEE/ACM Transactions on Audio, Speech, and Language Processing</em>, 2026 </div> <div class="periodical"> </div> <div class="pub-keywords" aria-label="Publication keywords"><span class="pub-keyword">Audio-Visual Learning</span><span class="pub-keyword">Few-Shot Learning</span><span class="pub-keyword">Prompt Tuning</span><span class="pub-keyword">Modality Rebalancing</span></div><div class="links"> <a href="https://doi.org/10.1109/TASLPRO.2026.3654246" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">DOI</a> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> <a href="https://doi.org/10.1109/TASLPRO.2026.3654246" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">HTML</a> <a href="https://github.com/DennisHgj/SMP_FSAVC" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Code</a> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">huang2026smp</span><span class="p">,</span>
   <span class="na">title</span> <span class="p">=</span> <span class="s">{Semantic Modulated Prompting for Few-Shot Audio-Visual Classification}</span><span class="p">,</span>
   <span class="na">author</span> <span class="p">=</span> <span class="s">{Huang, Guanjie and Cui, Yawen and Tsang, Danny Hin Kwok and Wang, Wenwu and Liu, Li}</span><span class="p">,</span>
   <span class="na">journal</span> <span class="p">=</span> <span class="s">{IEEE/ACM Transactions on Audio, Speech, and Language Processing}</span><span class="p">,</span>
